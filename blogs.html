@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sahara Scrap Recyling Co. - Sahara Scrap Recycle India</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2e8b57;
+            color: white;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #3cb371;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            color: #2e8b57;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-top {
+            background-color: green;
+            color: white;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+        
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .contact-info i {
+            margin-right: 5px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+		.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between logo and text */
+}
+
+.logo-img {
+    width: 50px; /* adjust as needed */
+    height: auto;
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.logo-text span {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+		
+		
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2e8b57;
+        }
+        
+        .logo span {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: normal;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .nav-links a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #2e8b57;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+
+	.service-main-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+	margin-top: 10px; 
+    text-align: center;
+}
+
+.main-card-title {
+    font-size: 2rem;
+    color: #2e8b57;
+    margin-bottom: 30px;
+}
+
+.service-sub-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.service-card-text {
+    padding: 20px;
+}
+
+.service-card-text h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-card-text p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+     
+		.process-section {
+    padding: 60px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.process-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.process-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.process-card:hover {
+    background: #e6f4ea;
+    transform: translateY(-5px);
+}
+
+.process-card img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.process-card h4 {
+    font-size: 1.2rem;
+    color: #2e8b57;
+    margin-bottom: 15px;
+}
+
+.process-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+	 
+	 /* Blogs Section Styles */
+        .blogs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .blog-image {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .blog-card:hover .blog-image img {
+            transform: scale(1.05);
+        }
+        
+        .blog-content {
+            padding: 25px;
+            position: relative;
+        }
+        
+        .blog-content h3 {
+            color: #2e8b57;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .blog-excerpt {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .blog-full-content {
+            color: #666;
+            line-height: 1.6;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .blog-card.expanded .blog-full-content {
+            max-height: 1000px;
+            margin-bottom: 20px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        
+        .read-more {
+            color: #2e8b57;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        
+        .read-more i {
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .blog-card.expanded .read-more i {
+            transform: rotate(180deg);
+        }
+	 
+	 
+	 
+        /* Footer Section Styles */
+    .footer-section {
+        background-color: #222;
+        color: #fff;
+        padding: 60px 0 20px;
+    }
+    
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .footer-title {
+        font-size: 1.3rem;
+        color: #2e8b57;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+    
+    .footer-title::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background-color: #2e8b57;
+    }
+    
+    .footer-links {
+        list-style: none;
+    }
+    
+    .footer-links li {
+        margin-bottom: 12px;
+    }
+    
+    .footer-links a {
+        color: #bbb;
+        transition: color 0.3s;
+        text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+        color: #2e8b57;
+    }
+    
+    .footer-address {
+        color: #bbb;
+        line-height: 1.8;
+        font-style: normal;
+    }
+    
+    .contact-info {
+        margin-top: 15px;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid #444;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-btn {
+        display: inline-block;
+        padding: 10px 30px;
+        background-color: #2e8b57;
+        color: white;
+        border-radius: 4px;
+        text-decoration: none;
+        margin-bottom: 20px;
+        transition: background-color 0.3s;
+    }
+    
+    .contact-btn:hover {
+        background-color: #3cb371;
+    }
+    
+    .copyright {
+        color: #888;
+        font-size: 0.9rem;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .footer-title {
+            font-size: 1.2rem;
+        }
+    }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +91-9967031291 / +91-9933002208</span>
+                    <span><i class="fas fa-envelope"></i> sahazad.khan@xxxxx.in</span>
+					<span><i class="fas fa-location"></i> Panvel Mumbai(INDIA)</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav>
+                <div class="logo">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMWFdIyVFOpruDFp2pLUbENO07rmlBPvj_oA&s" alt="Company Logo" class="logo-img" />
+				<div class="logo-text">
+                    SAHARA SCRAP RECYLING CO.
+                    <span>Sahara Scrap Recycle India</span>
+                </div>
+				</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="services.html">OUR SERVICES</a></li>
+                    <li><a href="clients.html">CLIENTS</a></li>
+                    <li><a href="blogs.html">BLOG</a></li>
+                    <li><a href="contactup.html">CONTACT US</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+				<!-- Blogs Section -->
+    <section class="blogs-section">
+        <div class="container">
+            <h1 class="section-title" style="margin-top:120px; color:green;">Our Latest Blog Posts</h1>
+            
+            <div class="blogs-grid">
+                <!-- Blog Post 1 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blogimages/img1.jpg" alt="Manufacturing Scrap">
+                    </div>
+                    <div class="blog-content">
+                        <h3 style="color:green;">Manufacturing Scrap Buyers</h3>
+                        <div class="blog-excerpt">
+                            <p>Manufacturing, Escort Inventory Buyers. Pan India Copper Materials Parts. Aluminum Manufacturing Parts, Metal Machinery Parts...</p>
+                        </div>
+                        <div class="blog-full-content">
+                            <p>Our manufacturing scrap buying services cover a wide range of materials including copper, aluminum, and various metal machinery parts. We provide comprehensive solutions for industrial scrap management across Pan India.</p>
+                            <p>With over 21 years of experience, we've developed efficient processes for evaluating, collecting, and recycling manufacturing scrap. Our team of experts ensures you get the best value for your scrap materials while maintaining environmental compliance.</p>
+                            <p>We specialize in:</p>
+                            <ul>
+                                <li>Copper materials and parts recycling</li>
+                                <li>Aluminum manufacturing scrap</li>
+                                <li>Metal machinery components</li>
+                                <li>Industrial byproduct management</li>
+                            </ul>
+                        </div>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar-alt"></i> March 15, 2025</span>
+                            <span class="read-more" style="color:green;">Read More <i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blogimages/img2.jpg" alt="Industrial Scrap">
+                    </div>
+                    <div class="blog-content">
+                        <h3 style="color:green;">Industrial Scrap Buyers in Pan India</h3>
+                        <div class="blog-excerpt">
+                            <p>Industrial and Manufacturing Scrap Buyers. All Types of Industrial Scrap Working or Maintenance Machinery Items. Power...</p>
+                        </div>
+                        <div class="blog-full-content">
+                            <p>As leading industrial scrap buyers in Pan India, we handle all types of industrial scrap including working or maintenance machinery items, power plant components, and manufacturing byproducts.</p>
+                            <p>Our services include:</p>
+                            <ul>
+                                <li>Complete industrial scrap evaluation</li>
+                                <li>Safe dismantling and removal</li>
+                                <li>Environmentally responsible recycling</li>
+                                <li>Competitive pricing with transparent valuation</li>
+                            </ul>
+                            <p>We serve industries ranging from automotive to heavy machinery, ensuring your scrap materials are handled professionally and efficiently.</p>
+                        </div>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar-alt"></i> March 19, 2025</span>
+                            <span class="read-more" style="color:green;">Read More <i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blogimages/img3.jpg" alt="Office Furniture">
+                    </div>
+                    <div class="blog-content">
+                        <h3 style="color:green;">Used Office Furniture & Scrap Buyers</h3>
+                        <div class="blog-excerpt">
+                            <p>Used Office Furniture & Asset Buyers in Pan India. Scrap Buyers and Dealers Workstreams. Potential...</p>
+                        </div>
+                        <div class="blog-full-content">
+                            <p>We are the premier buyers of used office furniture and assets in Pan India, offering comprehensive solutions for businesses upgrading or relocating their offices.</p>
+                            <p>Our services cover:</p>
+                            <ul>
+                                <li>Complete office furniture evaluation and purchase</li>
+                                <li>Workstation dismantling and removal</li>
+                                <li>Interior demolition services</li>
+                                <li>Asset inventory management</li>
+                            </ul>
+                            <p>Whether you're renovating, relocating, or simply upgrading your office space, we provide efficient, professional services that maximize your return on used furniture and minimize disruption to your business operations.</p>
+                            <p>Our team handles everything from initial assessment to final removal, ensuring a seamless process from start to finish.</p>
+                        </div>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar-alt"></i> April 10, 2025</span>
+                            <span class="read-more" style="color:green;">Read More <i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </div>
+                </div>
+				<!-- Blog Post 4 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blogimages/img4.jpg" alt="Industrial Scrap">
+                    </div>
+                    <div class="blog-content">
+                        <h3 style="color:green;">IT Equipment Scrap Buyers</h3>
+                        <div class="blog-excerpt">
+                            <p>As reliable IT Equipment Scrap Buyers, we specialize in the purchase and responsible recycling of a wide range of outdated, surplus, or non-working IT equipment...</p>
+                        </div>
+                        <div class="blog-full-content">
+                            <p>From computers, laptops, and servers to printers, routers, and networking hardware, we handle it all. Our services ensure that your equipment is disposed of safely and in an environmentally friendly way.</p>
+                            <p>By choosing us, you not only turn your:</p>
+                            <ul>
+                                <li>old tech into cash but also contribute</li>
+                                <li>to reducing e-waste and recovering valuable</li>
+                                <li>materials like metals, plastics, and circuit boards.</li>
+                                <li>We offer competitive pricing and efficient</li>
+                            </ul>
+                            <p>hassle-free collection services to make the process as smooth as possible.
+
+</p>
+                        </div>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar-alt"></i> April 22, 2025</span>
+                            <span class="read-more" style="color:green;">Read More <i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   <!-- Footer Section -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Quick About Us -->
+            <div class="footer-column">
+                <h3 class="footer-title"style="color:green;">QUICK ABOUT US</h3>
+                <ul class="footer-links">
+                    <li><a href="aboutus.html">About Our Company</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="privacy.html">Privacy & Policies</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="index.html">Join Our Team</a></li>
+                    <li><a href="contactup.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Our Success Gallery -->
+            <div class="footer-column">
+                <h3 class="footer-title" style="color:green;">CATEGORIES</h3>
+                <ul class="footer-links">
+                    <li><a href="automobilescrappage.html"><i class="fa-solid fa-folder-open"></i>Automobile Vehicles Scrap Buyers</a></li>
+                    <li><a href="batterypage.html"><i class="fa-solid fa-folder-open"></i>Batteries Scrap Buyers</a></li>
+                    <li><a href="computerpage.html><i class="fa-solid fa-folder-open"></i>Computer E-waste Scrap Buyers</a></li>
+                    <li><a href="industripage.html><i class="fa-solid fa-folder-open"></i>Industrial Scrap Buyers</a></li>
+                    <li><a href="officepage.html><i class="fa-solid fa-folder-open"></i>Office Furniture Scrap Buyers</a></li>
+                    <li><a href="werhousepage.html"><i class="fa-solid fa-folder-open"></i>Warehouse Excess Stock Buyers</a></li>
+                </ul>
+            </div>
+            
+            <!-- Office Address -->
+            <div class="footer-column">
+                <h3 class="footer-title" style="color:green;">OFFICE ADDRESS</h3>
+                <address class="footer-address">
+                    <p><i class="fa-solid fa-location-dot"></i>RUBY STEEL MARKET. GUT NO-134/0,135/2 PL-9<br>
+                    ADIVALI VILLAGE PANVEL RAI GAD Adivali 410208<br>
+                    Panvel Mumbai(INDIA)</p>
+                    
+                    <p class="contact-info">
+					<ul class="footer-links">
+                        <li><i class="fa-solid fa-phone"></i>Mob: +91-9967031291</li>
+                        <li><i class="fa-solid fa-phone"></i>Mob: +91-9933002208</li>
+                        <li><i class="fa-solid fa-envelope"></i>Email: sahazad.khan@xxxxx.in</li>
+                    </p>
+                </address>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            
+            <p class="copyright">Copyright 2024 SAHARA SCRAP RECYLING CO.</p>
+        </div>
+    </div>
+</footer>
+<script>
+	// Expandable Blog Cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const readMoreButtons = document.querySelectorAll('.read-more');
+            
+            readMoreButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const blogCard = this.closest('.blog-card');
+                    blogCard.classList.toggle('expanded');
+                    
+                    // Update button text
+                    if (blogCard.classList.contains('expanded')) {
+                        this.innerHTML = 'Read Less <i class="fas fa-chevron-up"></i>';
+                    } else {
+                        this.innerHTML = 'Read More <i class="fas fa-chevron-down"></i>';
+                    }
+                });
+            });
+        });
+</script>
+</body>
+</html>

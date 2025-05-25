@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sahara Scrap Recyling Co. - Sahara Scrap Recycle India</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2e8b57;
+            color: white;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #3cb371;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            color: #2e8b57;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-top {
+            background-color: green;
+            color: white;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+        
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .contact-info i {
+            margin-right: 5px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+		.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between logo and text */
+}
+
+.logo-img {
+    width: 50px; /* adjust as needed */
+    height: auto;
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.logo-text span {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+		
+		
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2e8b57;
+        }
+        
+        .logo span {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: normal;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .nav-links a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #2e8b57;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+
+	.service-main-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+	margin-top: 10px; 
+    text-align: center;
+}
+
+.main-card-title {
+    font-size: 2rem;
+    color: #2e8b57;
+    margin-bottom: 30px;
+}
+
+.service-sub-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.service-card-text {
+    padding: 20px;
+}
+
+.service-card-text h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-card-text p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+     
+		.process-section {
+    padding: 60px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.process-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.process-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.process-card:hover {
+    background: #e6f4ea;
+    transform: translateY(-5px);
+}
+
+.process-card img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.process-card h4 {
+    font-size: 1.2rem;
+    color: #2e8b57;
+    margin-bottom: 15px;
+}
+
+.process-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+	.clients-section {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.clients-section .section-title {
+    font-size: 2rem;
+    color: #2e8b57;
+    margin-bottom: 10px;
+	margin-top: 90px;
+}
+
+.clients-section .section-description {
+    font-size: 1rem;
+    color: #555;
+    max-width: 100%;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.clients-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.clients-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.clients-list ul li {
+    margin-bottom: 10px;
+    font-size: 0.7rem;
+    color: #333;
+}
+
+		
+		.clients-logo-section {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.clients-logo-section .section-title {
+    font-size: 2rem;
+    color: #2e8b57;
+    margin-bottom: 30px;
+}
+
+.clients-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.clients-logos img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.clients-logos img:hover {
+    transform: scale(1.1);
+}
+		
+	 
+        /* Footer Section Styles */
+    .footer-section {
+        background-color: #222;
+        color: #fff;
+        padding: 60px 0 20px;
+    }
+    
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .footer-title {
+        font-size: 1.3rem;
+        color: #2e8b57;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+    
+    .footer-title::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background-color: #2e8b57;
+    }
+    
+    .footer-links {
+        list-style: none;
+    }
+    
+    .footer-links li {
+        margin-bottom: 12px;
+    }
+    
+    .footer-links a {
+        color: #bbb;
+        transition: color 0.3s;
+        text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+        color: #2e8b57;
+    }
+    
+    .footer-address {
+        color: #bbb;
+        line-height: 1.8;
+        font-style: normal;
+    }
+    
+    .contact-info {
+        margin-top: 15px;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid #444;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-btn {
+        display: inline-block;
+        padding: 10px 30px;
+        background-color: #2e8b57;
+        color: white;
+        border-radius: 4px;
+        text-decoration: none;
+        margin-bottom: 20px;
+        transition: background-color 0.3s;
+    }
+    
+    .contact-btn:hover {
+        background-color: #3cb371;
+    }
+    
+    .copyright {
+        color: #888;
+        font-size: 0.9rem;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .footer-title {
+            font-size: 1.2rem;
+        }
+    }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +91-9967031291 / +91-9933002208</span>
+                    <span><i class="fas fa-envelope"></i> sahazad.khan@xxxxx.in</span>
+					<span><i class="fas fa-location"></i> Panvel Mumbai(INDIA)</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav>
+                <div class="logo">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMWFdIyVFOpruDFp2pLUbENO07rmlBPvj_oA&s" alt="Company Logo" class="logo-img" />
+				<div class="logo-text">
+                    SAHARA SCRAP RECYLING CO.
+                    <span>Sahara Scrap Recycle India</span>
+                </div>
+				</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="services.html">OUR SERVICES</a></li>
+                    <li><a href="clients.html">CLIENTS</a></li>
+                    <li><a href="blogs.html">BLOG</a></li>
+                    <li><a href="contactup.html">CONTACT US</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+				<!-- write here client list with three columns same as image-->
+				<!-- Clients Section Start -->
+<section class="clients-section">
+    <div class="container">
+
+        <h2 class="section-title">Our Clients</h2>
+
+        <p class="section-description">
+            A Brief List Of Our Customers gives you clear pictures of our Business deals and Professional Services and appreciated by some of the finest clients Software IT Companies, Corporate Companies, Private Limited Companies, Warehouse, Showrooms, Super Markets, Malls, Government Office, Apartments, Banks, Complexes, Factories, Industries, Manufacturing Units, Hospitals, Telecom Companies and Other Companies who truly believe in good deals with good market rates.
+        </p>
+
+        <div class="clients-list">
+            <ul>
+                <li>ASK RAYMOUND JAMES PVT LTD</li>
+                <li>STAR NEWS OFFICE</li>
+                <li>DSP MERRILL LYNCH</li>
+                <li>FOURESS INDIA LTD</li>
+                <li>SHANU RUYYA GMBH EXPORT & IMPORT</li>
+                <li>FERRA AERO SPACE PVT LTD</li>
+                <li>INDIAN AIR FORCE</li>
+                <li>GKB OPTICALS SHOWROOM</li>
+                <li>NHM RESTAURANT</li>
+                <li>IMPERIAL COURT OWNERS ASSOCIATION</li>
+                <li>COMMERCE HOUSE OWNERS ACCOCAITION</li>
+                <li>MICROSOFT INDIA</li>
+                <li>SAI LAKSHMI INDUSTRIES PVT LTD UNIT II</li>
+                <li>SHARP SOFTWARE DEVELOPMENT PVT LTD</li>
+                <li>TOYOTA BOSHOKU AUTOMOTIVE PVT LTD</li>
+                <li>SHOP CJ NETWORKS PVT LTD</li>
+                <li>SIGNATURE TEXTILES</li>
+                <li>SLK SOFTWARE SERVICES PVT LTD</li>
+                <li>WIPRO LIMITED</li>
+                <li>RABEMALL APPARELS PVT LTD</li>
+            </ul>
+
+            <ul>
+                <li>WIPRO NET LIMITED</li>
+                <li>GLOBAL CALCIUM PVT LTD</li>
+                <li>QUALCOMM INDIA PVT LTD</li>
+                <li>RAJ ABHYANKER LLP</li>
+                <li>KCIC PVT LTD SERVICES</li>
+                <li>STG SOFTWARE TECHNOLOGY</li>
+                <li>POLICE HEADQUARTERS</li>
+                <li>BANK OF MAHARASHTRA</li>
+                <li>RELIANCE LIMITED</li>
+                <li>AUTOLIV INDIA PVT LTD</li>
+                <li>HONEYWELL TECHNOLOGY SOLUTIONS PVT LTD</li>
+                <li>CREATIVE PORTICO INDIA PVT LTD</li>
+                <li>VIDEOCON TELECOMMUNICATION LIMITED</li>
+                <li>SUN TEE BUSINESS SOLUTIONS PVT LTD</li>
+                <li>SOCIETY GENERAL</li>
+                <li>DME INDIA PVT LTD</li>
+                <li>DEUTSCHE BANK GLOBAL SERVICE PVT LTD</li>
+                <li>ABB LIMITED BANGALORE</li>
+                <li>EXTON ELECTRONIC PVT LTD</li>
+                <li>ESTUATE SOFTWARE PVT LTD</li>
+            </ul>
+
+            <ul>
+                <li>FLIP KART</li>
+                <li>FORTIS HOSPITAL</li>
+                <li>HARMAN CONNECTED SERVICES</li>
+                <li>RED BUS PVT LTD (IBIBO GROUP PVT LTD)</li>
+                <li>HOLY FAITH INTERNATIONAL PVT LTD</li>
+                <li>IB TECHONILOGY</li>
+                <li>IBIS HOTEL</li>
+                <li>KOTAK INFRASTRUCTURE & PROJECTS</li>
+                <li>MICRO NOVA INPEX PVT LTD</li>
+                <li>MILLTEC MECHINERY PVT LTD</li>
+                <li>MYNTRA LIMITED</li>
+                <li>NORICAN GROUP</li>
+                <li>OSB INDIA PVT LTD</li>
+                <li>PCURA CONSULTING PVT LTD</li>
+                <li>SECURITY UPS INDIA</li>
+                <li>FLAT WORLD SOLUTION</li>
+                <li>HIMALAYA DRUGS</li>
+                <li>VODAFONE</li>
+                <li>SWISS RE GLOBAL BUSINESS SOLUTIONS</li>
+                <li>ADITYA BIRLA FASHION RETAIL LIMITED</li>
+            </ul>
+
+        </div>
+
+    </div>
+</section>
+<!-- Clients Section End -->
+
+
+			<!-- Clients Logo Section Start -->
+<section class="clients-logo-section">
+    <div class="container">
+
+        <h2 class="section-title" style="color:green;">Our Clients</h2>
+
+        <div class="clients-logos">
+            <img src="images/clientimges/img1.png" alt="Microsoft Logo">
+            <img src="images/clientimges/img2.png" alt="DSP Merrill Lynch Logo">
+            <img src="images/clientimges/img3.png" alt="Himalaya Logo">
+            <img src="images/clientimges/img4.png" alt="Flipkart Logo">
+            <img src="images/clientimges/img5.png" alt="ITC Logo">
+			<img src="images/clientimges/img6.png" alt="Toyota Logo">
+            <img src="images/clientimges/img7.png" alt="Impelpro Logo">
+            <img src="images/clientimges/img8.png" alt="Foodworks Logo">
+            <img src="images/clientimges/img9.png" alt="Dominos Logo">
+            <img src="images/clientimges/img10.png" alt="Paradise Logo">
+            <img src="images/clientimges/img11.png" alt="Wipro Logo">
+            <img src="images/clientimges/img12.png" alt="Reliance Communications Logo">
+            <img src="images/clientimges/img13.png" alt="Qualcomm Logo">
+            <img src="images/clientimges/img14.png" alt="Deutsche Bank Logo">
+            <img src="images/clientimges/img15.png" alt="Motorola Logo">
+            <img src="images/clientimges/img16.png" alt="Snowman Logo">
+            <img src="images/clientimges/img17.png" alt="Nilgiris Logo">
+            <img src="images/clientimges/img18.png" alt="Amrutanjan Logo">
+            <img src="images/clientimges/img19.png" alt="Dabur Logo">
+            <img src="images/clientimges/img20.png" alt="PID Logo">
+            <img src="images/clientimges/img21.png" alt="Honeywell Logo">
+            <img src="images/clientimges/img22.png" alt="Videocon Logo">
+            <img src="images/clientimges/img23.png" alt="Home Shop 18 Logo">
+            <img src="images/clientimges/img24.png" alt="RedBus Logo">
+            <img src="images/clientimges/img25.png" alt="Swiss Re Logo">
+            <img src="images/clientimges/img26.png" alt="Jyoti Logo">
+            <img src="images/clientimges/img27.png" alt="Wingreens Logo">
+            <img src="images/clientimges/img28.png" alt="Kwality Logo">
+            <img src="images/clientimges/img29.png" alt="Royaloak Logo">
+            <img src="images/clientimges/img30.png" alt="MTR Logo">
+        </div>
+
+    </div>
+</section>
+<!-- Clients Logo Section End -->
+
+
+   <!-- Footer Section -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Quick About Us -->
+            <div class="footer-column">
+                <h3 class="footer-title"style="color:green;">QUICK ABOUT US</h3>
+                <ul class="footer-links">
+                    <li><a href="aboutus.html">About Our Company</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="privacy.html">Privacy & Policies</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="index.html">Join Our Team</a></li>
+                    <li><a href="contactup.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Our Success Gallery -->
+            <div class="footer-column">
+                <h3 class="footer-title" style="color:green;">CATEGORIES</h3>
+                <ul class="footer-links">
+                    <li><a href="automobilescrappage.html"><i class="fa-solid fa-folder-open"></i>Automobile Vehicles Scrap Buyers</a></li>
+                    <li><a href="batterypage.html"><i class="fa-solid fa-folder-open"></i>Batteries Scrap Buyers</a></li>
+                    <li><a href="computerpage.html"><i class="fa-solid fa-folder-open"></i>Computer E-waste Scrap Buyers</a></li>
+                    <li><a href="industripage.html><i class="fa-solid fa-folder-open"></i>Industrial Scrap Buyers</a></li>
+                    <li><a href="officepage.html"><i class="fa-solid fa-folder-open"></i>Office Furniture Scrap Buyers</a></li>
+                    <li><a href="werhousepage.html"><i class="fa-solid fa-folder-open"></i>Warehouse Excess Stock Buyers</a></li>
+                </ul>
+            </div>
+            
+            <!-- Office Address -->
+            <div class="footer-column">
+                <h3 class="footer-title" style="color:green;">OFFICE ADDRESS</h3>
+                <address class="footer-address">
+                    <p><i class="fa-solid fa-location-dot"></i>RUBY STEEL MARKET. GUT NO-134/0,135/2 PL-9<br>
+                    ADIVALI VILLAGE PANVEL RAI GAD Adivali 410208<br>
+                    Panvel Mumbai(INDIA)</p>
+                    
+                    <p class="contact-info">
+					<ul class="footer-links">
+                        <li><i class="fa-solid fa-phone"></i>Mob: +91-9967031291</li>
+                        <li><i class="fa-solid fa-phone"></i>Mob: +91-9933002208</li>
+                        <li><i class="fa-solid fa-envelope"></i>Email: sahazad.khan@xxxxx.in</li>
+                    </p>
+                </address>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            
+            <p class="copyright">Copyright 2024 SAHARA SCRAP RECYLING CO.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
