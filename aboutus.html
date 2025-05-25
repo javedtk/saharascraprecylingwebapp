@@ -940,6 +940,23 @@ body {
       });
     });
   }
+
+   // Hide/show navbar on scroll
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', function() {
+            let st = window.pageYOffset || document.documentElement.scrollTop;
+            if (st < lastScrollTop) {
+                // Scrolling up - hide header
+                header.style.transform = 'translateY(0)';
+            } else {
+                // Scrolling down - show header
+                header.style.transform = 'translateY(-100%)';
+            }
+            lastScrollTop = st <= 0 ? 0 : st;
+        }, false);
+        // Initial style for smooth transition
+        header.style.transition = 'transform 0.3s';
 </script>
 </body>
 </html>
