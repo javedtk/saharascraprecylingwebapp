@@ -1084,7 +1084,60 @@ nav {
     }
 }
 
-    
+    /* Certificates Section Responsive Styles */
+.certificates-section {
+    padding: 60px 0;
+    background: #f9f9f9;
+}
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+.certificate-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: transform 0.3s;
+}
+.certificate-card:hover {
+    transform: translateY(-6px) scale(1.03);
+}
+.certificate-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: #f4f4f4;
+}
+
+@media (max-width: 991px) {
+    .certificates-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    .certificate-card img {
+        height: 160px;
+    }
+}
+@media (max-width: 600px) {
+    .certificates-section {
+        padding: 30px 0;
+    }
+    .certificates-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+    .certificate-card img {
+        height: 80px;
+    }
+}
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -1120,7 +1173,7 @@ nav {
                     <li><a href="services.html">OUR SERVICES</a></li>
                     <li><a href="clients.html">CLIENTS</a></li>
                     <li><a href="blogs.html">BLOG</a></li>
-                    <li><a href="contactup.html">CONTACT US</a></li>
+                    <li><a href="https://khannjuned3.wixsite.com/my-site-21">CONTACT US</a></li>
                 </ul>
                 <div class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
@@ -1536,6 +1589,40 @@ nav {
             </div>
         </div>
     </section>
+
+        <!-- Add this section where you want to show the certificates, e.g. after the Clients Section -->
+<section class="certificates-section">
+    <div class="container">
+        <h2 class="section-title" style="color:green;">Our Company Certificates</h2>
+        <div class="certificates-grid">
+            <div class="certificate-card">
+                <img src="images/homepagecertificates/img1.jpg" alt="Certificate 1">
+            </div>
+            <div class="certificate-card">
+                <img src="images/certificates/cert2.jpg" alt="Certificate 2">
+            </div>
+            <div class="certificate-card">
+                <img src="images/certificates/cert3.jpg" alt="Certificate 3">
+            </div>
+            <div class="certificate-card">
+                <img src="images/certificates/cert4.jpg" alt="Certificate 4">
+            </div>
+            <!-- Add more certificate-card divs as needed -->
+             <div class="certificate-card">
+                <img src="images/certificates/cert1.jpg" alt="Certificate 5">
+            </div>
+            <div class="certificate-card">
+                <img src="images/certificates/cert2.jpg" alt="Certificate 6">
+            </div>
+            <div class="certificate-card">
+                <img src="images/certificates/cert3.jpg" alt="Certificate 7">
+            </div>
+            <div class="certificate-card">
+                <img src="images/certificates/cert4.jpg" alt="Certificate 8">
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Footer Section -->
     <footer class="footer-section">
         <div class="container">
@@ -1548,7 +1635,7 @@ nav {
                         <li><a href="privacy.html">Privacy & Policies</a></li>
                         <li><a href="terms.html">Terms & Conditions</a></li>
                         <li><a href="index.html">Join Our Team</a></li>
-                        <li><a href="contactup.html">Contact Us</a></li>
+                        <li><a href="https://khannjuned3.wixsite.com/my-site-21">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
