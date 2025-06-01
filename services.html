@@ -117,7 +117,7 @@ body {
 }
 
 .logo-img {
-    width: 50px; /* adjust as needed */
+    width: 80px; /* adjust as needed */
     height: auto;
 }
 
@@ -510,6 +510,46 @@ body {
         font-size: 1rem;
     }
 }
+
+
+        .service-accordion-title {
+    width: 100%;
+    text-align: left;
+    background: #f2f9f2;
+    color: #2e8b57;
+    border: none;
+    outline: none;
+    padding: 18px 22px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    transition: background 0.2s;
+    margin-top: 10px;
+  }
+  .service-accordion-title:hover {
+    background: #e0f2e9;
+  }
+  .service-accordion-content {
+    background: #fff;
+    padding: 0 0 18px 0;
+    border-radius: 0 0 6px 6px;
+    margin-bottom: 10px;
+    border-left: 3px solid #2e8b57;
+    color: #333;
+    font-size: 1rem;
+    display: none;
+  }
+  @media (max-width: 600px) {
+    .service-accordion-title, .service-accordion-content {
+      font-size: 0.98rem;
+      padding: 12px 10px;
+    }
+    .service-accordion-content {
+      padding-left: 0;
+    }
+  }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -533,7 +573,7 @@ body {
         <div class="container">
             <nav>
                 <div class="logo">
-				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMWFdIyVFOpruDFp2pLUbENO07rmlBPvj_oA&s" alt="Company Logo" class="logo-img" />
+				<img src="images/companylogo/cmpnylgo.jpg" alt="Company Logo" class="logo-img" />
 				<div class="logo-text">
                     SAHARA SCRAP RECYLING CO.
                     <span>Sahara Scrap Recycle India</span>
@@ -555,286 +595,269 @@ body {
     </header>
 
 				<!-- Our Services Section -->
-			<!-- Main Service Card -->
-			<h2 style="color:green; text-align: center; margin-top:150px;">We Purchase all kinds of Scrap Materials They are Listed Below for Your Reference!</h2>
-<div class="service-main-card">
-    <h6 class="main-card-title" style="color:green;">IT Software Company and Corporates Furniture’s and Asset Buyers</h6>
-    <div class="service-sub-cards">
+			<!-- Our Services Section -->
+<h2 style="color:green; text-align: center; margin-top:150px;">We Purchase all kinds of Scrap Materials They are Listed Below for Your Reference!</h2>
 
-        <!-- Single Sub-Card 1 -->
-        <div class="service-card">
+<div class="service-accordion-container" style="margin-bottom: 40px;">
+  <div class="service-accordion">
+    <button class="service-accordion-title">IT Software Company and Corporates Furniture’s and Asset Buyers</button>
+    <div class="service-accordion-content">
+      <div class="service-main-card" style="box-shadow:none; padding:0; margin:0;">
+        <div class="service-sub-cards">
+          <!-- Single Sub-Card 1 -->
+          <div class="service-card">
             <img src="images/serviceimages/img1.jpg" alt="Used Office Furniture's Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Used Office Furniture's Buyers</h3>
-                <p>Workstations, Pedestal Box’s, Chairs, Tables, Cubicles, Aluminum Partitions, Wooden Partitions, and more.</p>
+              <h3 style="color:green;">Used Office Furniture's Buyers</h3>
+              <p>Workstations, Pedestal Box’s, Chairs, Tables, Cubicles, Aluminum Partitions, Wooden Partitions, and more.</p>
             </div>
-        </div>
-
-        <!-- Single Sub-Card 2 -->
-        <div class="service-card">
+          </div>
+          <!-- Single Sub-Card 2 -->
+          <div class="service-card">
             <img src="images/serviceimages/img2.jpg" alt="IT Equipment Scrap Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">IT Equipment Scrap Buyers</h3>
-                <p>Computer systems, Servers, Laptops, Printers, Networking equipment, and other IT assets purchase and recycling services.</p>
+              <h3 style="color:green;">IT Equipment Scrap Buyers</h3>
+              <p>Computer systems, Servers, Laptops, Printers, Networking equipment, and other IT assets purchase and recycling services.</p>
             </div>
-        </div>
-
-        <!-- Single Sub-Card 3 -->
-        <div class="service-card">
+          </div>
+          <!-- Single Sub-Card 3 -->
+          <div class="service-card">
             <img src="images/serviceimages/img3.jpg" alt="Industrial Scrap Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Office Demolishing Services</h3>
-                <p>We offer safe dismantling of corporate office interiors including partitions, flooring, and all structural changes.</p>
+              <h3 style="color:green;">Office Demolishing Services</h3>
+              <p>We offer safe dismantling of corporate office interiors including partitions, flooring, and all structural changes.</p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-
-
-<!--  Main Service Card 2  --> 
-				<div class="service-main-card">
-    <h2 class="main-card-title" style="color:green;">Computers E-waste Scrap Buyers and Batteries Recyclers</h2>
-    <div class="service-sub-cards">
-
-        <!-- Single Sub-Card 1 -->
-        <div class="service-card">
+    <button class="service-accordion-title">Computers E-waste Scrap Buyers and Batteries Recyclers</button>
+    <div class="service-accordion-content">
+      <div class="service-main-card" style="box-shadow:none; padding:0; margin:0;">
+        <div class="service-sub-cards">
+          <!-- Single Sub-Card 1 -->
+          <div class="service-card">
             <img src="images/serviceimages/img4.jpg" alt="Used Office Furniture's Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Used Computer E-waste Buyers</h3>
-                <p>We are trusted Used Computer E-waste Buyers, offering top value for your old, outdated, or non-working computers. We ensure safe recycling and eco-friendly disposal of all electronic components. Turn your unused tech into cash while helping the environment!</p>
+              <h3 style="color:green;">Used Computer E-waste Buyers</h3>
+              <p>We are trusted Used Computer E-waste Buyers, offering top value for your old, outdated, or non-working computers. We ensure safe recycling and eco-friendly disposal of all electronic components. Turn your unused tech into cash while helping the environment!</p>
             </div>
-        </div>
-
-        <!-- Single Sub-Card 2 -->
-        <div class="service-card">
+          </div>
+          <!-- Single Sub-Card 2 -->
+          <div class="service-card">
             <img src="images/serviceimages/img5.jpg" alt="IT Equipment Scrap Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">E-waste Scrap Buyers and Recyclers</h3>
-                <p>We are leading E-waste Scrap Buyers and Recyclers, specializing in the safe collection and recycling of all types of electronic waste. From old gadgets to industrial scrap, we handle it responsibly and sustainably. Recycle with us and support a cleaner, greener future!</p>
+              <h3 style="color:green;">E-waste Scrap Buyers and Recyclers</h3>
+              <p>We are leading E-waste Scrap Buyers and Recyclers, specializing in the safe collection and recycling of all types of electronic waste. From old gadgets to industrial scrap, we handle it responsibly and sustainably. Recycle with us and support a cleaner, greener future!</p>
             </div>
-        </div>
-
-        <!-- Single Sub-Card 3 -->
-        <div class="service-card">
+          </div>
+          <!-- Single Sub-Card 3 -->
+          <div class="service-card">
             <img src="images/serviceimages/img6.jpg" alt="Industrial Scrap Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Used and Scrap Batteries Buyers</h3>
-                <p>We are reliable Used and Scrap Batteries Buyers, offering safe collection and recycling of all types of batteries. We ensure proper handling to prevent environmental harm. Sell your old batteries to us and contribute to a safer, greener planet!</p>
+              <h3 style="color:green;">Used and Scrap Batteries Buyers</h3>
+              <p>We are reliable Used and Scrap Batteries Buyers, offering safe collection and recycling of all types of batteries. We ensure proper handling to prevent environmental harm. Sell your old batteries to us and contribute to a safer, greener planet!</p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-<!--  Main Service Card 3  --> 
-				<div class="service-main-card">
-    <h2 class="main-card-title" style="color:green;">Industrial Scrap Buyers and Manufacturing Scrap Buyers</h2>
-    <div class="service-sub-cards">
-
-        <!-- Single Sub-Card 1 -->
-        <div class="service-card">
+    <button class="service-accordion-title">Industrial Scrap Buyers and Manufacturing Scrap Buyers</button>
+    <div class="service-accordion-content">
+      <div class="service-main-card" style="box-shadow:none; padding:0; margin:0;">
+        <div class="service-sub-cards">
+          <!-- Single Sub-Card 1 -->
+          <div class="service-card">
             <img src="images/serviceimages/img7.jpg" alt="Used Office Furniture's Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Industrial Scrap Buyers and Dealers</h3>
-                <p>We are trusted Industrial Scrap Buyers and Dealers, specializing in the purchase and recycling of all types of industrial waste. From metal scraps to machinery parts, we offer competitive rates and eco-friendly disposal solutions. Turn your scrap into value with us!</p>
+              <h3 style="color:green;">Industrial Scrap Buyers and Dealers</h3>
+              <p>We are trusted Industrial Scrap Buyers and Dealers, specializing in the purchase and recycling of all types of industrial waste. From metal scraps to machinery parts, we offer competitive rates and eco-friendly disposal solutions. Turn your scrap into value with us!</p>
             </div>
-        </div>
-
-        <!-- Single Sub-Card 2 -->
-        <div class="service-card">
+          </div>
+          <!-- Single Sub-Card 2 -->
+          <div class="service-card">
             <img src="images/serviceimages/img8.jpg" alt="IT Equipment Scrap Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Industrial Power Plant Scrap Buyers</h3>
-                <p>As experienced Industrial Power Plant Scrap Buyers, we handle the removal and recycling of heavy power plant equipment, machinery, and metal waste. We ensure safe, efficient, and environmentally responsible scrap management. Get the best value for your surplus power plant materials!</p>
+              <h3 style="color:green;">Industrial Power Plant Scrap Buyers</h3>
+              <p>As experienced Industrial Power Plant Scrap Buyers, we handle the removal and recycling of heavy power plant equipment, machinery, and metal waste. We ensure safe, efficient, and environmentally responsible scrap management. Get the best value for your surplus power plant materials!</p>
             </div>
-        </div>
-
-        <!-- Single Sub-Card 3 -->
-        <div class="service-card">
+          </div>
+          <!-- Single Sub-Card 3 -->
+          <div class="service-card">
             <img src="images/serviceimages/img9.jpg" alt="Industrial Scrap Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Manufacturing Scrap Buyers</h3>
-                <p>We are professional Manufacturing Scrap Buyers, offering fast and reliable scrap removal services for factories and manufacturing units. From metal, plastic, to production waste, we buy and recycle it all. Partner with us for hassle-free and eco-conscious scrap solutions!</p>
+              <h3 style="color:green;">Manufacturing Scrap Buyers</h3>
+              <p>We are professional Manufacturing Scrap Buyers, offering fast and reliable scrap removal services for factories and manufacturing units. From metal, plastic, to production waste, we buy and recycle it all. Partner with us for hassle-free and eco-conscious scrap solutions!</p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-
-			<!--  Main Service Card 4  --> 
-				<div class="service-main-card">
-    <h2 class="main-card-title" style="color:green;">Used and Scrap Generators and Electrical Panel Boards Scrap Buyers</h2>
-    <div class="service-sub-cards">
-
-        <!-- Single Sub-Card 1 -->
-        <div class="service-card">
+    <button class="service-accordion-title">Used and Scrap Generators and Electrical Panel Boards Scrap Buyers</button>
+    <div class="service-accordion-content">
+      <div class="service-main-card" style="box-shadow:none; padding:0; margin:0;">
+        <div class="service-sub-cards">
+          <!-- Single Sub-Card 1 -->
+          <div class="service-card">
             <img src="images/serviceimages/img10.jpg" alt="Used Office Furniture's Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Used Generators Buyers and Dealers</h3>
-                <p>We are trusted Used Generators Buyers and Dealers, offering top prices for old, surplus, and second-hand generators. Whether working or non-working, we buy all types and ensure smooth, hassle-free deals. Turn your used generators into instant cash with us!</p>
+              <h3 style="color:green;">Used Generators Buyers and Dealers</h3>
+              <p>We are trusted Used Generators Buyers and Dealers, offering top prices for old, surplus, and second-hand generators. Whether working or non-working, we buy all types and ensure smooth, hassle-free deals. Turn your used generators into instant cash with us!</p>
             </div>
-        </div>
-
-        <!-- Single Sub-Card 2 -->
-        <div class="service-card">
+          </div>
+          <!-- Single Sub-Card 2 -->
+          <div class="service-card">
             <img src="images/serviceimages/img11.jpg" alt="IT Equipment Scrap Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">All Types of Generators Scrap Buyers</h3>
-                <p>As reliable All Types of Generators Scrap Buyers, we specialize in buying and recycling scrap generators of every size and model. We ensure safe dismantling and eco-friendly recycling practices. Sell your generator scrap to experts who value it right!</p>
+              <h3 style="color:green;">All Types of Generators Scrap Buyers</h3>
+              <p>As reliable All Types of Generators Scrap Buyers, we specialize in buying and recycling scrap generators of every size and model. We ensure safe dismantling and eco-friendly recycling practices. Sell your generator scrap to experts who value it right!</p>
             </div>
-        </div>
-
-        <!-- Single Sub-Card 3 -->
-        <div class="service-card">
+          </div>
+          <!-- Single Sub-Card 3 -->
+          <div class="service-card">
             <img src="images/serviceimages/img12.jpg" alt="Industrial Scrap Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Electrical Scrap Buyers</h3>
-                <p>We are leading Electrical Scrap Buyers, dealing in a wide range of electrical waste including cables, panels, transformers, and more. We offer competitive rates and ensure responsible recycling. Clear out your electrical scrap easily and sustainably with us!</p>
+              <h3 style="color:green;">Electrical Scrap Buyers</h3>
+              <p>We are leading Electrical Scrap Buyers, dealing in a wide range of electrical waste including cables, panels, transformers, and more. We offer competitive rates and ensure responsible recycling. Clear out your electrical scrap easily and sustainably with us!</p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-			
-			<!--  Main Service Card 5  --> 
-				<div class="service-main-card">
-    <h2 class="main-card-title" style="color:green;">Warehouse Industrial Racks and Warehouse Scrap Buyers</h2>
-    <div class="service-sub-cards">
-
-        <!-- Single Sub-Card 1 -->
-        <div class="service-card">
+    <button class="service-accordion-title">Warehouse Industrial Racks and Warehouse Scrap Buyers</button>
+    <div class="service-accordion-content">
+      <div class="service-main-card" style="box-shadow:none; padding:0; margin:0;">
+        <div class="service-sub-cards">
+          <!-- Single Sub-Card 1 -->
+          <div class="service-card">
             <img src="images/serviceimages/img13.jpg" alt="Used Office Furniture's Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Used Warehouse Racks Buyers</h3>
-                <p>We are dependable Used Warehouse Racks Buyers, purchasing all types of surplus, old, or unused warehouse racks. We offer fair prices and quick service, helping you free up space and recover value from your used storage systems.</p>
+              <h3 style="color:green;">Used Warehouse Racks Buyers</h3>
+              <p>We are dependable Used Warehouse Racks Buyers, purchasing all types of surplus, old, or unused warehouse racks. We offer fair prices and quick service, helping you free up space and recover value from your used storage systems.</p>
             </div>
-        </div>
-
-        <!-- Single Sub-Card 2 -->
-        <div class="service-card">
+          </div>
+          <!-- Single Sub-Card 2 -->
+          <div class="service-card">
             <img src="images/serviceimages/img14.jpg" alt="IT Equipment Scrap Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Warehouse Racks Scrap Buyers</h3>
-                <p>As experienced Warehouse Racks Scrap Buyers, we specialize in buying damaged or scrap metal racks from warehouses and industrial facilities. We ensure safe removal and eco-friendly recycling, turning your scrap into profit.</p>
+              <h3 style="color:green;">Warehouse Racks Scrap Buyers</h3>
+              <p>As experienced Warehouse Racks Scrap Buyers, we specialize in buying damaged or scrap metal racks from warehouses and industrial facilities. We ensure safe removal and eco-friendly recycling, turning your scrap into profit.</p>
             </div>
-        </div>
-
-        <!-- Single Sub-Card 3 -->
-        <div class="service-card">
+          </div>
+          <!-- Single Sub-Card 3 -->
+          <div class="service-card">
             <img src="images/serviceimages/img15.jpg" alt="Industrial Scrap Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Warehouse Scrap Buyers</h3>
-                <p>We are professional Warehouse Scrap Buyers, dealing with all kinds of warehouse scrap, including metal racks, shelving, and old fixtures. We offer prompt service, best prices, and environmentally responsible recycling solutions.</p>
+              <h3 style="color:green;">Warehouse Scrap Buyers</h3>
+              <p>We are professional Warehouse Scrap Buyers, dealing with all kinds of warehouse scrap, including metal racks, shelving, and old fixtures. We offer prompt service, best prices, and environmentally responsible recycling solutions.</p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-
-
-			<!--  Main Service Card 6  --> 
-				<div class="service-main-card">
-    <h2 class="main-card-title" style="color:green;">Ferrous and Non Ferrous Scrap Buyers </h2>
-    <div class="service-sub-cards">
-
-        <!-- Single Sub-Card 1 -->
-        <div class="service-card">
+    <button class="service-accordion-title">Ferrous and Non Ferrous Scrap Buyers</button>
+    <div class="service-accordion-content">
+      <div class="service-main-card" style="box-shadow:none; padding:0; margin:0;">
+        <div class="service-sub-cards">
+          <!-- Single Sub-Card 1 -->
+          <div class="service-card">
             <img src="images/serviceimages/img16.jpg" alt="Used Office Furniture's Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Copper Scrap Buyers and Dealers</h3>
-                <p>We are trusted Copper Scrap Buyers and Dealers, offering top rates for all types of copper scrap, including wires, pipes, and sheets. We ensure quick pickup and transparent deals, helping you recycle copper responsibly while earning the best value.</p>
+              <h3 style="color:green;">Copper Scrap Buyers and Dealers</h3>
+              <p>We are trusted Copper Scrap Buyers and Dealers, offering top rates for all types of copper scrap, including wires, pipes, and sheets. We ensure quick pickup and transparent deals, helping you recycle copper responsibly while earning the best value.</p>
             </div>
-        </div>
-
-        <!-- Single Sub-Card 2 -->
-        <div class="service-card">
+          </div>
+          <!-- Single Sub-Card 2 -->
+          <div class="service-card">
             <img src="images/serviceimages/img17.jpg" alt="IT Equipment Scrap Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">MS Metal Scrap Buyers</h3>
-                <p>As reliable MS Metal Scrap Buyers, we specialize in purchasing Mild Steel scrap from industries, construction sites, and warehouses. We provide fast service, competitive prices, and eco-friendly recycling solutions for all your MS scrap needs.</p>
+              <h3 style="color:green;">MS Metal Scrap Buyers</h3>
+              <p>As reliable MS Metal Scrap Buyers, we specialize in purchasing Mild Steel scrap from industries, construction sites, and warehouses. We provide fast service, competitive prices, and eco-friendly recycling solutions for all your MS scrap needs.</p>
             </div>
-        </div>
-
-        <!-- Single Sub-Card 3 -->
-        <div class="service-card">
+          </div>
+          <!-- Single Sub-Card 3 -->
+          <div class="service-card">
             <img src="images/serviceimages/img18.jpg" alt="Industrial Scrap Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Aluminum SS Scrap Buyers</h3>
-                <p>We are leading Aluminum SS Scrap Buyers, dealing in all types of aluminum and stainless steel scrap. Whether it’s sheets, rods, or industrial waste, we offer the best rates and smooth recycling services to support a cleaner, greener environment.</p>
+              <h3 style="color:green;">Aluminum SS Scrap Buyers</h3>
+              <p>We are leading Aluminum SS Scrap Buyers, dealing in all types of aluminum and stainless steel scrap. Whether it’s sheets, rods, or industrial waste, we offer the best rates and smooth recycling services to support a cleaner, greener environment.</p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-		<!--  Main Service Card 7  --> 
-				<div class="service-main-card">
-    <h2 class="main-card-title" style="color:green;">Automobile Junk Car Truck Buses Scrap Buyers</h2>
-    <div class="service-sub-cards">
-
-        <!-- Single Sub-Card 1 -->
-        <div class="service-card">
+    <button class="service-accordion-title">Automobile Junk Car Truck Buses Scrap Buyers</button>
+    <div class="service-accordion-content">
+      <div class="service-main-card" style="box-shadow:none; padding:0; margin:0;">
+        <div class="service-sub-cards">
+          <!-- Single Sub-Card 1 -->
+          <div class="service-card">
             <img src="images/serviceimages/img19.jpg" alt="Used Office Furniture's Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Automobile Scrap Buyers and Dealers</h3>
-                <p>We are trusted Automobile Scrap Buyers and Dealers, offering competitive prices for scrap vehicles of all types. Whether it's cars, trucks, or other vehicles, we ensure quick pickup and eco-friendly recycling, turning your old vehicles into cash.</p>
+              <h3 style="color:green;">Automobile Scrap Buyers and Dealers</h3>
+              <p>We are trusted Automobile Scrap Buyers and Dealers, offering competitive prices for scrap vehicles of all types. Whether it's cars, trucks, or other vehicles, we ensure quick pickup and eco-friendly recycling, turning your old vehicles into cash.</p>
             </div>
-        </div>
-
-        <!-- Single Sub-Card 2 -->
-        <div class="service-card">
+          </div>
+          <!-- Single Sub-Card 2 -->
+          <div class="service-card">
             <img src="images/serviceimages/img20.jpg" alt="IT Equipment Scrap Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">JCB and Truck Scrap Buyers</h3>
-                <p>As experienced JCB and Truck Scrap Buyers, we specialize in buying scrap from construction and heavy-duty vehicles. We offer fair prices for trucks, JCB machines, and other large machinery, ensuring safe removal and responsible recycling.</p>
+              <h3 style="color:green;">JCB and Truck Scrap Buyers</h3>
+              <p>As experienced JCB and Truck Scrap Buyers, we specialize in buying scrap from construction and heavy-duty vehicles. We offer fair prices for trucks, JCB machines, and other large machinery, ensuring safe removal and responsible recycling.</p>
             </div>
-        </div>
-
-        <!-- Single Sub-Card 3 -->
-        <div class="service-card">
+          </div>
+          <!-- Single Sub-Card 3 -->
+          <div class="service-card">
             <img src="images/serviceimages/img21.jpg" alt="Industrial Scrap Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Junk Cars Jeeps Scrap Buyers</h3>
-                <p>We are professional Junk Cars Jeeps Scrap Buyers, buying old, damaged, or non-functional cars and jeeps for recycling. We provide top value, fast service, and eco-friendly disposal, helping you get rid of unwanted vehicles while making money.</p>
+              <h3 style="color:green;">Junk Cars Jeeps Scrap Buyers</h3>
+              <p>We are professional Junk Cars Jeeps Scrap Buyers, buying old, damaged, or non-functional cars and jeeps for recycling. We provide top value, fast service, and eco-friendly disposal, helping you get rid of unwanted vehicles while making money.</p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-
-
-		<!--  Main Service Card 8  --> 
-				<div class="service-main-card">
-    <h2 class="main-card-title" style="color:green;">Warehouse Non Moving and Excess Inventory Buyers in Pan India</h2>
-    <div class="service-sub-cards">
-
-        <!-- Single Sub-Card 1 -->
-        <div class="service-card">
+    <button class="service-accordion-title">Warehouse Non Moving and Excess Inventory Buyers in Pan India</button>
+    <div class="service-accordion-content">
+      <div class="service-main-card" style="box-shadow:none; padding:0; margin:0;">
+        <div class="service-sub-cards">
+          <!-- Single Sub-Card 1 -->
+          <div class="service-card">
             <img src="images/serviceimages/img22.jpg" alt="Used Office Furniture's Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Amazon Flipkart Stock Buyers</h3>
-                <p>We are reliable Amazon Flipkart Stock Buyers, purchasing surplus, unsold, or excess inventory from e-commerce sellers. Whether it’s overstock or discontinued items, we offer fair rates and efficient stock management solutions to help you clear inventory fast.</p>
+              <h3 style="color:green;">Amazon Flipkart Stock Buyers</h3>
+              <p>We are reliable Amazon Flipkart Stock Buyers, purchasing surplus, unsold, or excess inventory from e-commerce sellers. Whether it’s overstock or discontinued items, we offer fair rates and efficient stock management solutions to help you clear inventory fast.</p>
             </div>
-        </div>
-
-        <!-- Single Sub-Card 2 -->
-        <div class="service-card">
+          </div>
+          <!-- Single Sub-Card 2 -->
+          <div class="service-card">
             <img src="images/serviceimages/img23.jpg" alt="IT Equipment Scrap Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Warehouse Excess Inventory Buyers</h3>
-                <p>As expert Warehouse Excess Inventory Buyers, we help businesses get rid of unsold or overstocked goods. Whether it’s seasonal items or excess production, we offer competitive prices and fast, hassle-free service to clear out warehouse space.</p>
+              <h3 style="color:green;">Warehouse Excess Inventory Buyers</h3>
+              <p>As expert Warehouse Excess Inventory Buyers, we help businesses get rid of unsold or overstocked goods. Whether it’s seasonal items or excess production, we offer competitive prices and fast, hassle-free service to clear out warehouse space.</p>
             </div>
-        </div>
-
-        <!-- Single Sub-Card 3 -->
-        <div class="service-card">
+          </div>
+          <!-- Single Sub-Card 3 -->
+          <div class="service-card">
             <img src="images/serviceimages/img24.jpg" alt="Industrial Scrap Buyers" />
             <div class="service-card-text">
-                <h3 style="color:green;">Warehouse Non Moving Stock Buyers</h3>
-                <p>We are specialized Warehouse Non-Moving Stock Buyers, purchasing slow-moving or obsolete inventory. We provide fair prices and streamlined solutions, helping businesses optimize their warehouse space and recover value from stagnant stock.</p>
+              <h3 style="color:green;">Warehouse Non Moving Stock Buyers</h3>
+              <p>We are specialized Warehouse Non-Moving Stock Buyers, purchasing slow-moving or obsolete inventory. We provide fair prices and streamlined solutions, helping businesses optimize their warehouse space and recover value from stagnant stock.</p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
+
 
 			<!-- Service Main Card Ends Here -->
 
@@ -960,6 +983,23 @@ body {
         }, false);
         // Initial style for smooth transition
         header.style.transition = 'transform 0.3s';
+
+
+
+        // Expand/collapse for service accordion
+  document.querySelectorAll('.service-accordion-title').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      // Collapse all others
+      document.querySelectorAll('.service-accordion-content').forEach(c => {
+        if (c !== content) c.style.display = 'none';
+      });
+      // Toggle current
+      content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+    });
+  });
+  // Collapse all on load
+  document.querySelectorAll('.service-accordion-content').forEach(c => c.style.display = 'none');
 </script> 
 </body>
 </html>
