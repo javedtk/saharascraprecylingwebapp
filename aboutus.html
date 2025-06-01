@@ -700,6 +700,51 @@ body {
     font-size: 1rem;
   }
 }
+
+/*new style addes */
+    .accordion-title {
+    width: 100%;
+    text-align: left;
+    background: #f2f9f2;
+    color: #2e8b57;
+    border: none;
+    outline: none;
+    padding: 16px 18px;
+    font-size: 1.08rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    transition: background 0.2s;
+  }
+  .accordion-title:hover {
+    background: #e0f2e9;
+  }
+  .accordion-content {
+    background: #fff;
+    padding: 16px 22px 12px 32px;
+    border-radius: 0 0 6px 6px;
+    margin-bottom: 10px;
+    border-left: 3px solid #2e8b57;
+    color: #333;
+    font-size: 1rem;
+    display: none;
+  }
+  .accordion-content ul {
+    margin: 0 0 0 18px;
+    padding: 0;
+    list-style: disc;
+  }
+  @media (max-width: 600px) {
+    .accordion-title, .accordion-content {
+      font-size: 0.98rem;
+      padding: 12px 10px;
+    }
+    .accordion-content {
+      padding-left: 18px;
+    }
+  }
+
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -747,18 +792,155 @@ body {
   <div class="container">
     <div class="about-content">
       <div class="about-image">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Ratan_Naval_Tata_in_2011.jpg" alt="Owner Image">
+        <img src="images/aboutuspngs/about.png" alt="Owner Image">
       </div>
       <div class="about-text">
         <h2>About Us</h2>
-        <p>I would like to take this opportunity to introduce myself: Sahazad Khan, and I am the Proprietor of this firm. My expertise: Scrap Buyers and Dealers, recycling, buying and selling, Scrap Materials Office Furniture’s, Industrial Scrap, Manufacturing Scrap, Warehouse Scrap, eco-friendly practices, and estimating asset and scrap values. We specialize in organizing manpower and labor for various projects, as well as managing the segregation of all types of turnkey interior dismantling and demolition projects, clearing warehouse stock scrap materials, and preparing inventory as per client requests.</p>
+        <p><strong>Sahara Scrap Recycling Co.</strong>  is a government-authorized and environmentally certified 
+organization, dedicated to providing comprehensive industrial scrap management and 
+sustainable waste recycling solutions. Headquartered in Navi Mumbai, Maharashtra, with a fully 
+equipped processing facility at Panvel (Raigad District), we operate under the licenses of the 
+<strong>Maharashtra  Pollution Control Board (MPCB) and Central Pollution Control Board (CPCB)</strong> , 
+along with statutory factory compliance.</p>
         
-        <p>Sahazad Khan possesses extensive experience across various industries and has a profound hands-on understanding of all Demotic, Commercial and Industrial project implementation aspects, from initial identification to detailed project planning. The core of his work is founded on intangible elements such as intuition, emotion, and shared memories and experiences.</p>
+        <p>Backed by years of industry experience, we specialize in the <strong> segregation, and 
+recycling of ferrous and non-ferrous metal scrap, industrial plastic waste, paper and 
+packaging waste, wooden scrap, thermocol (EPS), and wet/dry industrial waste.</strong>, Our services 
+are tailored to meet the compliance requirements of manufacturing industries, pharmaceutical 
+companies, chemical units, IT facilities, and commercial establishments across India.</p>
         
-        <p>I look forward to partnering with you on your next project, bringing together our collective expertise to achieve remarkable results while championing sustainable practices. Thank you for considering us as your trusted partner in progress.</p>
+        <p>Our operations are designed to align with India’s evolving environmental policies, promoting 
+circular economy principles by maximizing material recovery and minimizing landfill dependency. 
+We offer <strong>end-to-end waste management solutions,</strong> from on-site scrap pickup and segregation 
+to environmentally safe processing and documentation.</p>
+
+          <p>At Sahara Scrap Recycling Co., we believe in building long-term partnerships based on <strong>transparency, regulatory integrity, and operational excellence.</strong> 
+Our professional team ensures 
+that every step — from material collection to final recycling — <strong>both client expectations 
+and statutory environmental standards.</strong> </p>
       </div>
     </div>
 
+    <!-- Expandable Why You Should Choose Us Section -->
+    <div class="why-choose-expandable" style="margin-top:40px;">
+      <h2 style="color:#2e8b57; text-align:center; margin-bottom:24px;">Why You Should Choose Us</h2>
+      <p style="text-align:center; margin-bottom:24px;">
+        Sahara Scrap Recycling Co. is not just a scrap dealer — we are your certified, compliant, and audit-ready waste management partner.
+      </p>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-title">✅ 1. Government-Approved & Legally Certified</button>
+          <div class="accordion-content">
+            <ul>
+              <li>Registered with MPCB & CPCB for Hazardous & E-Waste Handling</li>
+              <li>GST, MSME, and IEC (Import/Export)</li>
+              <li>EPR Authorization for Plastic Waste</li>
+              <li>All licenses updated and available on request</li>
+              <li>This ensures zero legal liability for your company when working with us.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">🌐 2. ISO-Certified Systems & Global Standards</button>
+          <div class="accordion-content">
+            <ul>
+              <li>ISO 9001:2015 – Quality Management</li>
+              <li>ISO 14001:2015 – Environmental Practices</li>
+              <li>ISO 45001:2018 – Occupational Safety</li>
+              <li>Every service we offer is backed by global-standard systems.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">⏱️ 3. Quick, Committed, and Nationwide Service</button>
+          <div class="accordion-content">
+            <ul>
+              <li>24–72 hours pickup anywhere in India</li>
+              <li>In-house logistics with trained loaders</li>
+              <li>Flexible timing as per your plant operations</li>
+              <li>You don’t wait. You don’t follow up. We deliver.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">🧾 4. Complete Documentation for Compliance & Audits</button>
+          <div class="accordion-content">
+            <ul>
+              <li>Waste Manifest / Form 10 / Form 13</li>
+              <li>Gate Entry Slips / Handover Receipts</li>
+              <li>Disposal Certificate / Photographic Proof</li>
+              <li>Helps your EHS, Safety, and Audit teams stay 100% ready.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">🛠️ 5. All Materials Handled Under One Roof</button>
+          <div class="accordion-content">
+            <ul>
+              <li>Ferrous & Non-Ferrous Metals</li>
+              <li>Electrical, Electronic & IT Waste</li>
+              <li>Pharma, Chemical & Hazardous Waste</li>
+              <li>Plastics, Paper, Thermocol, Packaging Scrap</li>
+              <li>No need for multiple vendors — we handle it all.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">🔍 6. Transparent Pricing & Digital Weight System</button>
+          <div class="accordion-content">
+            <ul>
+              <li>Rate finalization before pickup</li>
+              <li>On-site weighing and digital documentation</li>
+              <li>PAN/GST-compliant invoices</li>
+              <li>Zero hidden costs. No manipulation.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">🧑‍🔧 7. Trained Manpower with PPE & EHS Protocols</button>
+          <div class="accordion-content">
+            <ul>
+              <li>Industry safety standards</li>
+              <li>Fire & chemical handling rules</li>
+              <li>PPE kits and contamination control</li>
+              <li>Safety for your site, our team, and the environment.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">🤝 8. Trusted by 200+ Companies Across India</button>
+          <div class="accordion-content">
+            <ul>
+              <li>USFDA Pharma Units</li>
+              <li>MIDC & SEZ Manufacturers</li>
+              <li>IT Companies, Paint Plants, Packaging Factories</li>
+              <li>Long-term trust from top industrial clients proves our reliability.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">🌿 9. Eco-Friendly Recycling, Not Just Disposal</button>
+          <div class="accordion-content">
+            <ul>
+              <li>We promote Green Disposal, Circular Economy, and Zero Landfill Practices in all our projects.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">🔒 10. Zero-Risk. Zero Headache. 100% Confidence.</button>
+          <div class="accordion-content">
+            <ul>
+              <li>Legally safe disposal</li>
+              <li>Fully documented service</li>
+              <li>Reliable operations</li>
+              <li>No audit worries</li>
+            </ul>
+            <p style="margin-top:10px;"><strong>📣 One Partner. Complete Solution. Legally Certified.</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Expandable Section -->
     <div class="why-choose-us">
       <h2>Why Choose Us!</h2>
       <div class="features">
@@ -861,6 +1043,70 @@ body {
       </div>
     </div>
 
+
+
+    <!-- New Informational Sections -->
+    <div class="container" style="margin-top: 40px;">
+      <!-- Who We Are -->
+      <div style="margin-bottom: 32px;">
+        <h2 style="color: #2e8b57; margin-bottom: 10px;">Who We Are</h2>
+        <p>
+          <strong>Sahara Scrap Recycling Co. is a licensed and government-approved industrial scrap recycling and waste management company,</strong> headquartered at Panvel, Navi Mumbai. With over a decade of operational experience, we offer <strong>end-to-end  solutions</strong> for handling all forms of <strong>ferrous</strong> &amp; <strong>non-ferrous scrap, hazardous waste, e-waste, plastic waste, pharmaceutical residues, paper, and demolition scrap</strong> — in full compliance with <strong>MPCB , CPCB, and Pollution Board regulations.</strong><br>
+          We are proud to be an <strong>ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018</strong> certified organization, delivering quality service, environmental safety, and occupational health standards to the industries of India.
+        </p>
+      </div>
+
+      <!-- Our Mission -->
+      <div style="margin-bottom: 32px;">
+        <h2 style="color: #2e8b57; margin-bottom: 10px;">Our Mission</h2>
+        <p>
+          To become <strong>India’s most trusted industrial waste management partner,</strong> by offering safe, ethical, and efficient recycling services, with full legal compliance, transparency, and traceability.
+        </p>
+      </div>
+
+      <!-- Our Vision -->
+      <div style="margin-bottom: 32px;">
+        <h2 style="color: #2e8b57; margin-bottom: 10px;">Our Vision</h2>
+        <p>
+          To lead the transformation of India’s scrap and waste industry by providing <strong>environmentally  sustainable, legally compliant, and technologically advanced</strong> recycling solutions — supporting the “Swachh Bharat”, “Make in India”, and Circular Economy movements.
+        </p>
+      </div>
+
+      <!-- What We Do -->
+      <div style="margin-bottom: 32px;">
+        <h2 style="color: #2e8b57; margin-bottom: 10px;">What We Do</h2>
+        <p>
+          We specialize in the <strong>collection , segregation, documentation, transport, and recycling</strong> of the following waste categories:
+        </p>
+        <ul style="margin-left: 20px; margin-bottom: 0;">
+          <li>✅ Ferrous &amp; Non-Ferrous Metal Scrap (Aluminium, Copper, Brass, etc.)</li>
+          <li>✅ Hazardous &amp; Chemical Waste (Paint sludge, expired chemicals, etc.)</li>
+          <li>✅ Pharmaceutical Waste (API sludge, R&amp;D rejects, foil, PPE kits)</li>
+          <li>✅ Plastic Waste (HDPE, LDPE, PVC, PET, FIBC Bags, Drums)</li>
+          <li>✅ Electrical &amp; Electronic Scrap (Motors, Wires, IT Waste)</li>
+          <li>✅ Paper Waste (Office Paper, OCC, Books, Newspapers)</li>
+          <li>✅ Thermocol / EPS Waste</li>
+          <li>✅ Plant Demolition &amp; Industrial Dismantling</li>
+          <li>✅ Wooden Packing Waste, Off-spec Products &amp; Garbage</li>
+        </ul>
+      </div>
+
+      <!-- Industries We Serve -->
+      <div style="margin-bottom: 32px;">
+        <h2 style="color: #2e8b57; margin-bottom: 10px;">Industries We Serve</h2>
+        <ul style="margin-left: 20px;">
+          <li>Pharmaceuticals / API Manufacturers</li>
+          <li>Paints, Coatings &amp; Chemical Industries</li>
+          <li>FMCG &amp; Packaging Units</li>
+          <li>Engineering &amp; Manufacturing Plants</li>
+          <li>Automotive Ancillaries</li>
+          <li>Data Centers, IT/ITES &amp; Commercial Establishments</li>
+          <li>Construction &amp; Infrastructure</li>
+          <li>Government Organizations &amp; Warehouses</li>
+        </ul>
+      </div>
+    </div>
+      <!--new code enddddd-->
   </div>
 </div>
 
@@ -957,6 +1203,22 @@ body {
         }, false);
         // Initial style for smooth transition
         header.style.transition = 'transform 0.3s';
+
+
+        // Accordion functionality
+  document.querySelectorAll('.accordion-title').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      // Collapse all others
+      document.querySelectorAll('.accordion-content').forEach(c => {
+        if (c !== content) c.style.display = 'none';
+      });
+      // Toggle current
+      content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+    });
+  });
+  // Optionally, collapse all on load
+  document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
 </script>
 </body>
 </html>
