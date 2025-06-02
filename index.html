@@ -95,7 +95,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
+            /* padding: 15px 0; */
             position: relative;
         }
         .logo {
@@ -131,9 +131,12 @@
             color: #2e8b57;
         }
         .mobile-menu-btn {
-            display: none;
+            /* display: none;
             font-size: 1.5rem;
-            cursor: pointer;
+            cursor: pointer; */
+            margin-left: auto;
+            margin-right: 0;
+            display: none;
         }
         .social-links{
             padding: 0px 10px;
@@ -206,13 +209,13 @@ nav {
         /* Hero Slider Section */
         .hero-slider {
             position: relative;
-            height: 100vh;
+            height: 200vh;
             margin-top: 80px;
             overflow: hidden;
         }
         .slide {
             position: absolute;
-            top: 0;
+            top: 75px;
             left: 0;
             width: 100%;
             height: 100%;
@@ -225,11 +228,11 @@ nav {
             justify-content: center;
             text-align: center;
             color: white;
-            background-color: rgba(0, 0, 0, 0.6);
+            /* background-color:           rgba(0, 0, 0, 0.6); */
             background-blend-mode: overlay;
         }
-        .slide.active {
-            opacity: 1;
+        .slide.active {      
+            opacity: 1;    
         }
         .slide-content {
             max-width: 800px;
@@ -1087,8 +1090,8 @@ nav {
     /* Certificates Section Responsive Styles */
 .certificates-section {
     padding: 60px 0;
-    background: #f9f9f9;
-}
+    /* background: #f9f9f9; */
+}   
 .certificates-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1098,7 +1101,7 @@ nav {
 .certificate-card {
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    /* box-shadow: 0 4px 12px rgba(0,0,0,0.08); */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -1138,6 +1141,183 @@ nav {
         height: 80px;
     }
 }
+
+      /* new code added */
+            /* Simple grid for certificate images without cards */
+.certificates-grid.simple-certificates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+    background: none;
+    box-shadow: none;
+}
+.certificates-grid.simple-certificates img {
+    width: 100%;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 6px;
+    /* background: #f4f4f4; */
+    background: none;
+    box-shadow: none;
+    display: block;
+    margin: 0 auto;
+    padding: 8px 0;
+    transition: transform 0.3s;
+}
+.certificates-grid.simple-certificates img:hover {
+    transform: scale(1.04);
+    /* box-shadow: 0 2px 8px rgba(46,139,87,0.08); */
+}
+
+
+/* new css added */
+        /* header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(.4,0,.2,1);
+}
+header.shrink {
+    padding-top: 0 !important;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+.header-top {
+    background-color: green;
+    color: white;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    transition: padding 0.3s cubic-bezier(.4,0,.2,1), font-size 0.3s cubic-bezier(.4,0,.2,1);
+}
+header.shrink .header-top {
+    padding: 2px 0;
+    font-size: 0.8rem;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: padding 0.3s cubic-bezier(.4,0,.2,1);
+    padding: 15px 0;
+    position: relative;
+}
+header.shrink nav {
+    padding: 2px 0 !important;
+}
+.logo-img {
+    width: 80px;
+    height: auto;
+    transition: width 0.3s cubic-bezier(.4,0,.2,1), height 0.3s cubic-bezier(.4,0,.2,1);
+}
+header.shrink .logo-img {
+    width: 40px;
+}
+@media (max-width: 600px) {
+    .logo-img {
+        width: 35px;
+    }
+    header.shrink .logo-img {
+        width: 22px;
+    }
+} */
+
+
+        header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(.4,0,.2,1);
+}
+header.shrink {
+    padding-top: 0 !important;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+.header-top {
+    background-color: green;
+    color: white;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    transition: padding 0.3s cubic-bezier(.4,0,.2,1), font-size 0.3s cubic-bezier(.4,0,.2,1);
+}
+header.shrink .header-top {
+    padding: 1px 0;
+    font-size: 0.7rem;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: padding 0.3s cubic-bezier(.4,0,.2,1);
+    position: relative;
+    padding: 15px 0;
+}
+header.shrink nav {
+    padding: 0 !important;
+}
+.logo-img {
+    width: 80px;
+    height: auto;
+    transition: width 0.3s cubic-bezier(.4,0,.2,1), height 0.3s cubic-bezier(.4,0,.2,1);
+}
+header.shrink .logo-img {
+    width: 28px;
+}
+.nav-links a {
+    font-size: 1rem;
+    padding: 6px 0;
+    transition: font-size 0.3s;
+}
+header.shrink .nav-links a {
+    font-size: 0.85rem;
+    padding: 2px 0;
+}
+@media (max-width: 600px) {
+    .logo-img {
+        width: 28px;
+    }
+    header.shrink .logo-img {
+        width: 18px;
+    }
+    nav {
+        padding: 7px 0;
+    }
+    header.shrink nav {
+        padding: 0 !important;
+    }
+    .header-top {
+        padding: 2px 0;
+        font-size: 0.8rem;
+    }
+    header.shrink .header-top {
+        padding: 1px 0;
+        font-size: 0.7rem;
+    }
+}
+
+/* new code added for service scroll image */
+        .services.fixed-bg {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1518770660439-4636190af475') center center/cover no-repeat fixed;
+    /* fallback color if image not loaded */
+    background-color: #f0f0f0;
+}
+.services.fixed-bg::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* background: rgba(255,255,255,0.82); */
+    z-index: 1;
+}
+.services.fixed-bg > .container {
+    position: relative;
+    z-index: 2;
+}
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -1175,7 +1355,7 @@ nav {
                     <li><a href="blogs.html">BLOG</a></li>
                     <li><a href="https://khannjuned3.wixsite.com/my-site-21">CONTACT US</a></li>
                 </ul>
-                <div class="mobile-menu-btn">
+                <div class="mobile-menu-btn" style="margin-left:auto; ">
                     <i class="fas fa-bars"></i>
                 </div>
             </nav>
@@ -1184,19 +1364,20 @@ nav {
     <!-- Hero Slider Section -->
     <section class="hero-slider" id="home">
         <!-- Slide 1 -->
-        <div class="slide active" style="background-image: url('https://media.istockphoto.com/id/476920899/photo/scrap-metal-recycling-plant-and-crane.jpg?s=612x612&w=0&k=20&c=Ne6IQSiTdox4Sm-yMFrSYRtEhF_WkBMOfJ_ieaoI_WA=');">
+         <div class="slide active" style="background-image: url('images/slideimages/img1.png');">
             <div class="slide-content">
-                <h1>We Help in Clearing Non Moving Stocks and Excess Inventory's</h1>
+                <!-- <h1>We Help in Clearing Non Moving Stocks and Excess Inventory's</h1>
                 <p>SAHARA SCRAP RECYLING has been a leader in the scrap business industry since 2003, offering professional services across India.</p>
-                <a href="contactup.html" class="custom-btn">Contact Us</a>
+                <a href="contactup.html" class="custom-btn">Contact Us</a> -->
             </div>
         </div>
+        
         <!-- Slide 2 -->
-        <div class="slide" style="background-image: url('https://emrglobalstorage.blob.core.windows.net/sitemedia/uploads/looking-at-scrap-metal.jpg');">
+        <div class="slide" style="background-image: url('images/slideimages/img2.png');">
             <div class="slide-content">
-                <h1>Leading Scrap Buyer in Pan India</h1>
+                <!-- <h1>Leading Scrap Buyer in Pan India</h1>
                 <p>Professional services as a prominent scrap buyer and service provider across various sectors throughout India.</p>
-                <a href="contactup.html" class="custom-btn">Get a Quote</a>
+                <a href="contactup.html" class="custom-btn">Get a Quote</a> -->
             </div>
         </div>
         <!-- Slide 3 -->
@@ -1206,11 +1387,31 @@ nav {
                 <p>We purchase used office furniture and complete office assets, including workstations, chairs, partitions, and more.</p>
                 <a href="contactup.html" class="custom-btn">Get In Touch</a>
             </div>
-        </div>
+        </div>  
+             
+        <!-- Slide 4: Video Slide -->
+        
+                <div class="slide" style="background: #000; position: relative; overflow: hidden;">
+    <video 
+        id="slider-video-bg"
+        src="images/slideimages/IMG_3812.MP4"
+        poster="images/companylogo/cmpnylgo.jpg"
+        autoplay
+        muted
+        loop
+        playsinline
+        style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1;">
+    </video>
+    <div class="slide-content" style="position:relative;z-index:2; background:rgba(0,0,0,0.45); border-radius:10px;">
+        <h1 style="color:white; margin-top:20px;">WELCOME TO SAHARA SCRAP RECYCLING CO.</h1>
+        <p style="color:white;">LEADING INDIA'S INDUSTRIAL SCRAP & WASTE RECYCLING WITH ENVIROMENTAL COMPILANCE AND COMPLETE LICENCING.</p>
+    </div>
+</div>
         <div class="slider-controls">
             <button class="active" data-slide="0"></button>
             <button data-slide="1"></button>
             <button data-slide="2"></button>
+            <button data-slide="3"></button>
         </div>
     </section>
     <!-- About Section -->
@@ -1242,13 +1443,13 @@ nav {
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="images/img1.jpg" alt="Scrap recycling">
+                    <img src="images/slideimages/image (2).png" alt="Scrap recycling">
                 </div>
             </div>
         </div>
     </section>
     <!-- Services Section -->
-    <section class="services" id="services">
+    <section class="services fixed-bg" id="services">
         <div class="container">
             <h2 class="section-title" style="color:green;">Our Services</h2>
             <div class="services-grid">
@@ -1530,71 +1731,71 @@ nav {
             <p class="clients-subtitle">Brief list of our customers gives you clear pictures of our business ethics and professional services, appreciated by series of the finest clients</p>
             <div class="clients-slider">
                 <div class="clients-track">
+                    <!-- <div class="client-logo">
+                        <img src="images/clientsimages/adbd.png" alt="Aditya Birla">
+                    </div> -->
                     <div class="client-logo">
-                        <img src="images/clientsimages/adb.jpg" alt="Aditya Birla">
+                        <img src="images/clientsimages/wal.png" alt="Walmart">
                     </div>
                     <div class="client-logo">
-                        <img src="images/clientsimages/walmart.jpg" alt="Walmart">
+                        <img src="images/clientsimages/vdo.png" alt="Videocon">
                     </div>
                     <div class="client-logo">
-                        <img src="images/clientsimages/vdocon.jpg" alt="Videocon">
+                        <img src="images/clientsimages/cbre.png" alt="CBRE">
                     </div>
                     <div class="client-logo">
-                        <img src="images/clientsimages/crbe.jpg" alt="CBRE">
+                        <img src="images/clientsimages/reilance.png" alt="GE Aviation">
                     </div>
                     <div class="client-logo">
-                        <img src="images/clientsimages/geavi.jpg" alt="GE Aviation">
+                        <img src="images/clientsimages/him.png" alt="Himlaya">
                     </div>
                     <div class="client-logo">
-                        <img src="images/clientsimages/him.jpg" alt="Himlaya">
+                        <img src="images/clientsimages/king.png" alt="Kingfisher">
                     </div>
                     <div class="client-logo">
-                        <img src="images/clientsimages/kngfsr.jpg" alt="Kingfisher">
+                        <img src="images/clientsimages/godrej.png" alt="Godrej">
                     </div>
                     <div class="client-logo">
-                        <img src="images/clientsimages/god.jpg" alt="Godrej">
-                    </div>
-                    <div class="client-logo">
-                        <img src="images/clientsimages/tata.jpg" alt="Tata">
+                        <img src="images/clientsimages/tata.png" alt="Tata">
                     </div>
                     <!-- Duplicate Logos for Infinite Loop -->
+                    <!-- <div class="client-logo">
+                        <img src="images/clientsimages/adbd.png" alt="Aditya Birla">
+                    </div> -->
                     <div class="client-logo">
-                        <img src="images/clientsimages/adb.jpg" alt="Aditya Birla">
+                        <img src="images/clientsimages/wal.png" alt="Walmart">
                     </div>
                     <div class="client-logo">
-                        <img src="images/clientsimages/walmart.jpg" alt="Walmart">
+                        <img src="images/clientsimages/vdo.png" alt="Videocon">
                     </div>
                     <div class="client-logo">
-                        <img src="images/clientsimages/vdocon.jpg" alt="Videocon">
+                        <img src="images/clientsimages/cbre.png" alt="CBRE">
                     </div>
                     <div class="client-logo">
-                        <img src="images/clientsimages/crbe.jpg" alt="CBRE">
+                        <img src="images/clientsimages/reilance.png" alt="GE Aviation">
                     </div>
                     <div class="client-logo">
-                        <img src="images/clientsimages/geavi.jpg" alt="GE Aviation">
+                        <img src="images/clientsimages/him.png" alt="Himlaya">
                     </div>
                     <div class="client-logo">
-                        <img src="images/clientsimages/him.jpg" alt="Himlaya">
+                        <img src="images/clientsimages/king.png" alt="Kingfisher">
                     </div>
                     <div class="client-logo">
-                        <img src="images/clientsimages/kngfsr.jpg" alt="Kingfisher">
+                        <img src="images/clientsimages/godrej.png" alt="Godrej">
                     </div>
                     <div class="client-logo">
-                        <img src="images/clientsimages/god.jpg" alt="Godrej">
-                    </div>
-                    <div class="client-logo">
-                        <img src="images/clientsimages/tata.jpg" alt="Tata">
+                        <img src="images/clientsimages/tata.png" alt="Tata">
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section>   
 
         <!-- Add this section where you want to show the certificates, e.g. after the Clients Section -->
-<section class="certificates-section">
+<!-- <section class="certificates-section">
     <div class="container">
         <h2 class="section-title" style="color:green;">Our Company Certificates</h2>
-        <div class="certificates-grid">
+         <div class="certificates-grid">
             <div class="certificate-card">
                 <img src="images/homepagecertificates/mpcb.jpg" alt="Certificate 1">
             </div>
@@ -1606,11 +1807,11 @@ nav {
             </div>
             <div class="certificate-card">
                 <img src="images/homepagecertificates/ISO.png" alt="Certificate 4">
-            </div>
+            </div> -->
             <!-- Add more certificate-card divs as needed -->
-             <div class="certificate-card">
+             <!-- <div class="certificate-card">
                 <img src="images/homepagecertificates/ISO14.webp" alt="Certificate 5">
-            </div>
+            </div>  
             <div class="certificate-card">
                 <img src="images/homepagecertificates/ISO45.png" alt="Certificate 6">
             </div>
@@ -1620,6 +1821,22 @@ nav {
             <div class="certificate-card">
                 <img src="images/homepagecertificates/MSMEE.png" alt="Certificate 8">
             </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="certificates-section">
+    <div class="container">
+        <h2 class="section-title" style="color:green;">Our Company Certificates</h2>
+        <div class="certificates-grid simple-certificates">
+            <img src="images/homepagecertificates/mpcb.png" alt="Certificate 1">
+            <img src="images/homepagecertificates/cpcb.png" alt="Certificate 2">
+            <img src="images/homepagecertificates/epr.png" alt="Certificate 3">
+            <img src="images/homepagecertificates/ISO.png" alt="Certificate 4">
+            <img src="images/homepagecertificates/ISO14.webp" alt="Certificate 5">
+            <img src="images/homepagecertificates/ISO45.png" alt="Certificate 6">
+            <img src="images/homepagecertificates/GST.png" alt="Certificate 7">
+            <img src="images/homepagecertificates/MSMEE.png" alt="Certificate 8">
         </div>
     </div>
 </section>
@@ -1714,7 +1931,7 @@ nav {
             showSlide(nextIndex);
         }
         function startSlider() {
-            slideInterval = setInterval(nextSlide, 5000);
+            slideInterval = setInterval(nextSlide, 10000);
         }
         const slider = document.querySelector('.hero-slider');
         slider.addEventListener('mouseenter', () => {
@@ -1839,21 +2056,40 @@ nav {
         });
 
         // Hide/show navbar on scroll
-        let lastScrollTop = 0;
-        const header = document.querySelector('header');
-        window.addEventListener('scroll', function() {
-            let st = window.pageYOffset || document.documentElement.scrollTop;
-            if (st < lastScrollTop) {
-                // Scrolling up - hide header
-                header.style.transform = 'translateY(0)';
-            } else {
-                // Scrolling down - show header
-                header.style.transform = 'translateY(-100%)';
-            }
-            lastScrollTop = st <= 0 ? 0 : st;
-        }, false);
-        // Initial style for smooth transition
-        header.style.transition = 'transform 0.3s';
+        // let lastScrollTop = 0;
+        // const header = document.querySelector('header');
+        // window.addEventListener('scroll', function() {
+        //     let st = window.pageYOffset || document.documentElement.scrollTop;
+        //     if (st < lastScrollTop) {
+        //         // Scrolling up - hide header
+        //         header.style.transform = 'translateY(0)';
+        //     } else {
+        //         // Scrolling down - show header
+        //         header.style.transform = 'translateY(-100%)';
+        //     }
+        //     lastScrollTop = st <= 0 ? 0 : st;
+        // }, false);
+        // // Initial style for smooth transition
+        // header.style.transition = 'transform 0.3s';
+
+
+
+        //new js added
+        // Header shrink/expand on scroll direction
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', function() {
+        let st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > lastScrollTop) {
+            // Scrolling down - shrink header
+            header.classList.add('shrink');
+        } else {
+            // Scrolling up - expand header
+            header.classList.remove('shrink');
+        }
+        lastScrollTop = st <= 0 ? 0 : st;
+    }, false);
+        
     </script>
 </body>
 </html>

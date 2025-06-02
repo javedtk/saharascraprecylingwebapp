@@ -21,7 +21,10 @@
         .header-top .container { display: flex; justify-content: space-between; align-items: center; }
         .contact-info { display: flex; gap: 20px; }
         .contact-info i { margin-right: 5px; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+        nav { display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; }
         .logo { display: flex; align-items: center; gap: 10px; }
         .logo-img { width: 80px; height: auto; }
         .logo-text { font-weight: bold; font-size: 1.2rem; }
@@ -29,7 +32,9 @@
         .nav-links { display: flex; gap: 25px; }
         .nav-links a { font-weight: 500; transition: color 0.3s; }
         .nav-links a:hover { color: #2e8b57; }
-        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; }
+        .mobile-menu-btn { margin-left: auto;
+    margin-right: 0;
+    display: none; }
 
         .main-description { text-align: center; max-width: 1000px; margin: 100px auto 50px; padding: 20px; color: #555; font-size: 1.1rem; }
         .cards-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px 0; opacity: 0; transform: translateY(50px); animation: fadeInUp 1s forwards; }
@@ -207,6 +212,60 @@
         gap: 30px;
     }
 }
+
+    /* new code added */
+
+    header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(.4,0,.2,1);
+}
+header.shrink {
+    padding-top: 0 !important;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+.header-top {
+    background-color: green;
+    color: white;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    transition: padding 0.3s cubic-bezier(.4,0,.2,1), font-size 0.3s cubic-bezier(.4,0,.2,1);
+}
+header.shrink .header-top {
+    padding: 2px 0;
+    font-size: 0.8rem;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: padding 0.3s cubic-bezier(.4,0,.2,1);
+    /* padding: 15px 0; */
+    position: relative;
+}
+header.shrink nav {
+    padding: 2px 0 !important;
+}
+.logo-img {
+    width: 80px;
+    height: auto;
+    transition: width 0.3s cubic-bezier(.4,0,.2,1), height 0.3s cubic-bezier(.4,0,.2,1);
+}
+header.shrink .logo-img {
+    width: 40px;
+}
+@media (max-width: 600px) {
+    .logo-img {
+        width: 35px;
+    }
+    header.shrink .logo-img {
+        width: 22px;
+    }
+}
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -231,11 +290,11 @@
     <div class="container">
         <nav>
             <div class="logo">
-                <img src="images/companylogo/cmpnylgo.jpg" alt="Company Logo" class="logo-img" />
-                <div class="logo-text">
+                <img src="images/companylogo/cmpnylgo.jpg" alt="Company Logo" class="logo-img" style="height:60px; width:200px; display:block;" />
+                <!-- <div class="logo-text">
                     SAHARA SCRAP RECYLING CO.
                     <span>Sahara Scrap Recycle India</span>
-                </div>
+                </div> -->
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">HOME</a></li>
@@ -245,7 +304,7 @@
                 <li><a href="blogs.html">BLOG</a></li>
                 <li><a href="https://khannjuned3.wixsite.com/my-site-21">CONTACT US</a></li>
             </ul>
-            <div class="mobile-menu-btn">
+            <div class="mobile-menu-btn" style="margin-left:auto;">
                 <i class="fas fa-ellipsis-v"></i>
             </div>
         </nav>
@@ -349,21 +408,36 @@
     });
 
     // Hide/show navbar on scroll
-        let lastScrollTop = 0;
-        const header = document.querySelector('header');
-        window.addEventListener('scroll', function() {
-            let st = window.pageYOffset || document.documentElement.scrollTop;
-            if (st < lastScrollTop) {
-                // Scrolling up - hide header
-                header.style.transform = 'translateY(0)';
-            } else {
-                // Scrolling down - show header
-                header.style.transform = 'translateY(-100%)';
-            }
-            lastScrollTop = st <= 0 ? 0 : st;
-        }, false);
-        // Initial style for smooth transition
-        header.style.transition = 'transform 0.3s';
+        // let lastScrollTop = 0;
+        // const header = document.querySelector('header');
+        // window.addEventListener('scroll', function() {
+        //     let st = window.pageYOffset || document.documentElement.scrollTop;
+        //     if (st < lastScrollTop) {
+        //         // Scrolling up - hide header
+        //         header.style.transform = 'translateY(0)';
+        //     } else {
+        //         // Scrolling down - show header
+        //         header.style.transform = 'translateY(-100%)';
+        //     }
+        //     lastScrollTop = st <= 0 ? 0 : st;
+        // }, false);
+        // // Initial style for smooth transition
+        // header.style.transition = 'transform 0.3s';
+        
+    // Shrink header on scroll// Header shrink/expand on scroll direction
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', function() {
+        let st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > lastScrollTop) {
+            // Scrolling down - shrink header
+            header.classList.add('shrink');
+        } else {
+            // Scrolling up - expand header
+            header.classList.remove('shrink');
+        }
+        lastScrollTop = st <= 0 ? 0 : st;
+    }, false);
 </script>
 
 </body>
