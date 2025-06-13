@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Arial', sans-serif;           
         }
         body {
             line-height: 1.6;
@@ -1318,6 +1318,53 @@ header.shrink .nav-links a {
     position: relative;
     z-index: 2;
 }
+
+    /* new code added for expendable title */
+
+        .expandable-info-section .expandable-group {
+            margin-bottom: 18px;
+            border-radius: 6px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            overflow: hidden;
+        }
+        .expandable-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 18px 22px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #2e8b57;
+            background: #eaf7ee;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .expand-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #2e8b57;
+            cursor: pointer;
+            outline: none;
+            width: 32px;
+            height: 32px;
+            line-height: 1;
+        }
+        .expandable-content {
+            padding: 18px 22px;
+            color: #333;
+            background: #fff;
+            font-size: 1rem;
+            animation: fadeIn 0.3s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0;}
+            to { opacity: 1;}
+        }
+        @media (max-width:600px) {
+            .expandable-title, .expandable-content { padding: 12px 8px; font-size: 1rem;}
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -1415,7 +1462,7 @@ header.shrink .nav-links a {
         </div>
     </section>
     <!-- About Section -->
-    <section class="about" id="about">
+    <!-- <section class="about" id="about">
         <div class="container">
             <h2 class="section-title" style="color:green;">About Our Company</h2>
             <div class="about-content">
@@ -1444,6 +1491,122 @@ header.shrink .nav-links a {
                 </div>
                 <div class="about-image">
                     <img src="images/slideimages/image (2).png" alt="Scrap recycling">
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title" style="color:green;">About Our Company</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 style="color:green;">Leading Scrap Buyer in Pan India</h2>
+                    <p>
+                        Sahara Scrap Recycling Co. is a professionally managed, government-licensed organization specializing in the collection, segregation, transportation, and recycling of industrial scrap and waste materials across India.<br>
+                        With operations headquartered at Panvel, Navi Mumbai (Maharashtra), we are known for delivering environmentally responsible and fully compliant solutions to a wide spectrum of industries including:
+                    </p>
+                    <ul style="margin-bottom:18px;">
+                        <li>Iron, Steel & Metal Manufacturing Industry</li>
+                        <li>Oil, Gas & Petrochemical Industry</li>
+                        <li>Energy & Power Renewable Energy Industry</li>
+                        <li>Pharmaceutical & Chemical Industry</li>
+                        <li>Paint & Coatings Manufacturing Industry</li>
+                        <li>E-commerce, Retail & Warehousing Industry</li>
+                        <li>FMCG (Fast-Moving Consumer Goods) Industry</li>
+                        <li>Printing, Publishing & Packaging Industry</li>
+                        <li>Hotel, Restaurant & Hospitality Industry</li>
+                        <li>Food & Beverage Manufacturing Industry</li>
+                        <li>Shipping, Ports & Marine Logistics Industry</li>
+                    </ul>
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i><a href="mailto:sahazad.khan@gmail.com"> Email Us : sahazad.khan@gmail.com</a></p>
+                        <p><i class="fas fa-phone"></i><a href="tel:+919967031291"> Contact Us : +91-9967031291 / +91-9933002208</a></p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3 style="color:green;">200+</h3>
+                            <p>Scrap Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 style="color:green;">21+</h3>
+                            <p>Years of Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 style="color:green;">100+</h3>
+                            <p>Satisfied Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/slideimages/image (2).png" alt="Scrap recycling">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expandable Info Section -->
+    <section class="expandable-info-section" style="background:#f7f7f7;">
+        <div class="container">
+            <div class="expandable-group">
+                <div class="expandable-title" onclick="toggleExpandable(this)">
+                    <span>Our Legacy of Excellence</span>
+                    <button class="expand-btn">+</button>
+                </div>
+                <div class="expandable-content" style="display:none;">
+                    <p>
+                        Backed by years of experience, Sahara Scrap Recycling Co. has earned a solid reputation for its integrity, transparency, and technical know-how in handling:
+                    </p>
+                    <ul>
+                        <li>Solid Waste Management Rules, 2016</li>
+                        <li>Plastic Waste Management Rules, 2016</li>
+                        <li>Hazardous Waste Management Rules, 2016</li>
+                        <li>E-Waste Management Rules, 2022</li>
+                        <li>Bio-Medical Waste Management Rules, 2016</li>
+                    </ul>
+                    <p>
+                        We are proud to work with leading industries, SEZs, factories, and multinational manufacturing units for safe and ethical scrap disposal.
+                    </p>
+                </div>
+            </div>
+            <div class="expandable-group">
+                <div class="expandable-title" onclick="toggleExpandable(this)">
+                    <span>Our Certifications & Legal Compliance</span>
+                    <button class="expand-btn">+</button>
+                </div>
+                <div class="expandable-content" style="display:none;">
+                    <ul>
+                        <li>GST Registered | MSME Certified | Import Export Code (IEC)</li>
+                        <li>MPCB & CPCB Authorized for Waste Handling</li>
+                        <li>Hazardous waste Authorized</li>
+                        <li>E-Waste Authorized</li>
+                        <li>EPR Authorized</li>
+                        <li>Plastic Waste Recycling Plant Approved</li>
+                        <li>ISO 9001:2015 | ISO 14001:2015 | ISO 45001:2018</li>
+                        <li>PF & ESI Compliance | WC Insurance Policy Covered</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="expandable-group">
+                <div class="expandable-title" onclick="toggleExpandable(this)">
+                    <span>Mission & Commitment</span>
+                    <button class="expand-btn">+</button>
+                </div>
+                <div class="expandable-content" style="display:none;">
+                    <p>
+                        We are committed to promoting sustainable recycling practices, ensuring that waste is disposed of responsibly and materials are brought back into the circular economy.<br>
+                        Our mission is to offer cost-effective, legally compliant, and timely scrap management services to every client — no matter the industry or volume.
+                    </p>
+                </div>
+            </div>
+            <div class="expandable-group">
+                <div class="expandable-title" onclick="toggleExpandable(this)">
+                    <span>Serving PAN INDIA — Reliable | Certified | Responsible</span>
+                    <button class="expand-btn">+</button>
+                </div>
+                <div class="expandable-content" style="display:none;">
+                    <p>
+                        Whether it’s a routine pickup or a full plant clearance, Sahara Scrap Recycling Co. offers turnkey scrap & waste management services with zero compromise on documentation, safety, or environmental compliance.
+                    </p>
                 </div>
             </div>
         </div>
@@ -2090,6 +2253,29 @@ header.shrink .nav-links a {
         lastScrollTop = st <= 0 ? 0 : st;
     }, false);
         
+
+    //new code expandable
+
+    function toggleExpandable(el) {
+            const content = el.nextElementSibling;
+            const btn = el.querySelector('.expand-btn');
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                btn.textContent = "−";
+            } else {
+                content.style.display = "none";
+                btn.textContent = "+";
+            }
+        }
+        // Optionally collapse all on load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.expandable-content').forEach(function(el) {
+                el.style.display = 'none';
+            });
+            document.querySelectorAll('.expand-btn').forEach(function(btn) {
+                btn.textContent = '+';
+            });
+        });
     </script>
 </body>
 </html>
