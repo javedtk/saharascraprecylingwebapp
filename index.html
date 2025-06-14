@@ -1233,6 +1233,35 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .industry-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.industry-list li {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 8px 16px;
+    font-weight: 200;
+    color: #1a7f37;
+    font-size: 1.05rem;
+    min-width: 240px;
+    flex: 1 1 300px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.industry-list li:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 6px 18px rgba(26,127,55,0.15);
+    background: #f6fff8;
+}
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -1330,18 +1359,20 @@
                         Sahara Scrap Recycling Co. is a professionally managed, government-licensed organization specializing in the collection, segregation, transportation, and recycling of industrial scrap and waste materials across India.<br>
                         With operations headquartered at Panvel, Navi Mumbai (Maharashtra), we are known for delivering environmentally responsible and fully compliant solutions to a wide spectrum of industries including:
                     </p>
-                    <ul style="margin-bottom:18px;">
-                        <li>Iron, Steel & Metal Manufacturing Industry</li>
-                        <li>Oil, Gas & Petrochemical Industry</li>
-                        <li>Energy & Power Renewable Energy Industry</li>
-                        <li>Pharmaceutical & Chemical Industry</li>
-                        <li>Paint & Coatings Manufacturing Industry</li>
-                        <li>E-commerce, Retail & Warehousing Industry</li>
-                        <li>FMCG (Fast-Moving Consumer Goods) Industry</li>
-                        <li>Printing, Publishing & Packaging Industry</li>
-                        <li>Hotel, Restaurant & Hospitality Industry</li>
-                        <li>Food & Beverage Manufacturing Industry</li>
-                        <li>Shipping, Ports & Marine Logistics Industry</li>
+                    <ul >
+                        <ul class="industry-list">
+    <li>Iron, Steel & Metal Manufacturing Industry</li>
+    <li>Oil, Gas & Petrochemical Industry</li>
+    <li>Energy & Power Renewable Energy Industry</li>
+    <li>Pharmaceutical & Chemical Industry</li>
+    <li>Paint & Coatings Manufacturing Industry</li>
+    <li>E-commerce, Retail & Warehousing Industry</li>
+    <li>FMCG (Fast-Moving Consumer Goods) Industry</li>
+    <li>Printing, Publishing & Packaging Industry</li>
+    <li>Hotel, Restaurant & Hospitality Industry</li>
+    <li>Food & Beverage Manufacturing Industry</li>
+    <li>Shipping, Ports & Marine Logistics Industry</li>
+</ul>
                     </ul>
                     <div class="contact-details">
                         <p><i class="fas fa-envelope"></i><a href="mailto:sahazad.khan@gmail.com"> Email Us : sahazad.khan@gmail.com</a></p>
