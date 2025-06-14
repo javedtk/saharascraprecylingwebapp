@@ -64,6 +64,7 @@
             font-size: 2.2rem;
             color: #2e8b57;
         }
+        
         /* Header Styles */
         header {
             background-color: white;
@@ -72,17 +73,22 @@
             width: 100%;
             top: 0;
             z-index: 1000;
+            transition: all 0.3s cubic-bezier(.4,0,.2,1);
+        }
+        header.shrink {
+            padding-top: 0 !important;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.08);
         }
         .header-top {
             background-color: green;
             color: white;
             padding: 10px 0;
             font-size: 0.9rem;
+            transition: padding 0.3s cubic-bezier(.4,0,.2,1), font-size 0.3s cubic-bezier(.4,0,.2,1);
         }
-        .header-top .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        header.shrink .header-top {
+            padding: 1px 0;
+            font-size: 0.7rem;
         }
         .contact-info {
             display: flex;
@@ -95,8 +101,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            /* padding: 15px 0; */
+            transition: padding 0.3s cubic-bezier(.4,0,.2,1);
             position: relative;
+            padding: 15px 0;
+        }
+        header.shrink nav {
+            padding: 0 !important;
         }
         .logo {
             display: flex;
@@ -109,15 +119,10 @@
         .logo-img {
             width: 80px;
             height: auto;
+            transition: width 0.3s cubic-bezier(.4,0,.2,1), height 0.3s cubic-bezier(.4,0,.2,1);
         }
-        .logo-text {
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        .logo-text span {
-            display: block;
-            font-size: 0.9rem;
-            color: #777;
+        header.shrink .logo-img {
+            width: 28px;
         }
         .nav-links {
             display: flex;
@@ -126,111 +131,85 @@
         .nav-links a {
             font-weight: 500;
             transition: color 0.3s;
+            font-size: 1rem;
+            padding: 6px 0;
+            transition: font-size 0.3s;
+        }
+        header.shrink .nav-links a {
+            font-size: 0.85rem;
+            padding: 2px 0;
         }
         .nav-links a:hover {
             color: #2e8b57;
         }
         .mobile-menu-btn {
-            /* display: none;
-            font-size: 1.5rem;
-            cursor: pointer; */
             margin-left: auto;
             margin-right: 0;
             display: none;
         }
-        .social-links{
+        .social-links {
             padding: 0px 10px;
         }
-
-        /* Make navbar and contact bar thinner */
-/* header {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    background-color: white;
-   
-    transition: transform 0.3s;
-}
-.header-top {
-    background-color: green;
-    color: white;
-    padding: 4px 0;     
-    font-size: 0.85rem;  
-}
-.header-top .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 7px 0;     
-    position: relative;
-}
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;            
-    font-size: 1.3rem;   
-}
-.logo-img {
-    width: 36px;        
-    height: auto;
-}
-.nav-links a {
-    font-size: 1rem;    
-    padding: 6px 0;     
-}
-.mobile-menu-btn {
-    font-size: 1.2rem;   
-}
-@media (max-width: 600px) {
-    .logo {
-        font-size: 1rem;
-        gap: 5px;
-    }
-    .logo-img {
-        width: 28px;
-    }
-    nav {
-        padding: 5px 0;
-    }
-    .header-top {
-        padding: 2px 0;
-        font-size: 0.8rem;
-    }
-} */
-
 
         /* Hero Slider Section */
         .hero-slider {
             position: relative;
-            height: 200vh;
-            margin-top: 80px;
+            width: 100%;
+            height: 700px;
             overflow: hidden;
         }
-        .slide {
-            position: absolute;
-            top: 75px;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            /* background-color:           rgba(0, 0, 0, 0.6); */
-            background-blend-mode: overlay;
-        }
+        .hero-slider .slide {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.5s;
+        opacity: 0;
+        z-index: 1;
+        animation: none;
+}
+
+        .hero-slider .slide.active {
+        opacity: 1;
+        z-index: 2;
+        animation: zoomIn 8s ease-in-out forwards;
+}
+
+        @keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.08);
+    }
+}
+
+        .hero-slider .slide video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+.slide {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;     
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-blend-mode: overlay;
+}
         .slide.active {      
             opacity: 1;    
         }
@@ -268,6 +247,36 @@ nav {
         .slider-controls button.active {
             background-color: white;
         }
+        @media (max-width: 768px) {
+            .hero-slider {
+                padding-top: 660px;
+                height: 38vh;
+                min-height: 180px;
+                max-height: 320px;
+            }
+        }
+        @media (max-width: 600px) {
+            .hero-slider {
+                padding-top: 660px;
+                height: 28vh;
+                min-height: 120px;
+                max-height: 200px;
+            }
+            .slide-content {
+                padding: 0 5px;
+            }
+            .slide h1 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+            .slide p {
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+        }
+
+        
+        
         /* About Section */
         .about-content {
             display: flex;
@@ -303,6 +312,7 @@ nav {
             border-radius: 8px;
             margin-left: 240px;
         }
+        
         /* Services Section */
         .services {
             background-color: #f0f0f0;
@@ -343,7 +353,39 @@ nav {
             margin-bottom: 15px;
             color: #2e8b57;
         }
-        /* Recycle Intro Section Styles */
+        /* new code added for service scroll image */
+        .services.fixed-bg {
+        position: relative;
+        background: url('https://images.unsplash.com/photo-1518770660439-4636190af475') center center/cover no-repeat fixed;
+        /* fallback color if image not loaded */
+        background-color: #f0f0f0;
+     }
+        .services.fixed-bg::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        /* background: rgba(255,255,255,0.82); */
+        z-index: 1;
+    }
+        .services.fixed-bg > .container {
+        position: relative;
+        z-index: 2;
+    }
+
+/*new animation for service cards*/
+    .service-card {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: opacity, transform;
+}
+
+.service-card.slide-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+        /* Recycle Intro Section */
         .recycle-intro {
             background-size: cover;
             background-position: center;
@@ -376,6 +418,7 @@ nav {
             flex-wrap: wrap;
             gap: 15px;
         }
+        
         /* Projects Section */
         .projects-section {
             background-color: #f0f0f0;
@@ -441,7 +484,8 @@ nav {
             text-align: center;
             margin-top: 25px;
         }
-        /* Experience Section Styles */
+        
+        /* Experience Section */
         .experience-section {
             background-size: cover;
             background-position: center;
@@ -491,7 +535,8 @@ nav {
             font-size: 1.1rem;
             opacity: 0.9;
         }
-        /* Blog Section Styles */
+        
+        /* Blog Section */
         .blog-section {
             padding: 80px 0;
             background-color: #f9f9f9;
@@ -576,7 +621,8 @@ nav {
         .social-share a:hover {
             color: #2e8b57;
         }
-        /* Testimonials Section Styles */
+        
+        /* Testimonials Section */
         .testimonials-section {
             background-size: cover;
             background-position: center;
@@ -649,7 +695,8 @@ nav {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        /* Clients Section Styles */
+        
+        /* Clients Section */
         .clients-section {
             padding: 80px 0;
             background-color: #f9f9f9;
@@ -695,7 +742,56 @@ nav {
             0% { transform: translateX(0);}
             100% { transform: translateX(calc(-150px * 9)); }
         }
-        /* Footer Section Styles */
+        
+        /* Certificates Section */
+        .certificates-section {
+            padding: 60px 0;
+        }   
+        .certificates-grid.simple-certificates {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+            background: none;
+            box-shadow: none;
+        }
+        .certificates-grid.simple-certificates img {
+            width: 100%;
+            height: 90px;
+            object-fit: contain;
+            border-radius: 6px;
+            background: none;
+            box-shadow: none;
+            display: block;
+            margin: 0 auto;
+            padding: 8px 0;
+            transition: transform 0.3s;
+        }
+        .certificates-grid.simple-certificates img:hover {
+            transform: scale(1.04);
+        }
+        
+        /* Certificates grid default: 4 per row on desktop */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    justify-items: center;
+    align-items: center;
+}
+
+/* 2 per row on tablet and mobile */
+@media (max-width: 1024px) {
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .certificates-grid img {
+        width: 100%;
+        max-width: 160px;
+        height: auto;
+    }
+}
+        /* Footer Section */
         .footer-section {
             background-color: #222;
             color: #fff;
@@ -770,7 +866,47 @@ nav {
             color: #888;
             font-size: 0.9rem;
         }
-        /* --- RESPONSIVE STYLES --- */
+        
+        /* Expandable Info Section */
+        .expandable-info-section .expandable-group {
+            margin-bottom: 18px;
+            border-radius: 6px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            overflow: hidden;
+        }
+        .expandable-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 18px 22px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #2e8b57;
+            background: #eaf7ee;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .expand-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #2e8b57;
+            cursor: pointer;
+            outline: none;
+            width: 32px;
+            height: 32px;
+            line-height: 1;
+        }
+        .expandable-content {
+            padding: 18px 22px;
+            color: #333;
+            background: #fff;
+            font-size: 1rem;
+            animation: fadeIn 0.3s;
+        }
+        
+        /* Responsive Styles */
         @media (max-width: 1200px) {
             .about-image img {
                 margin-left: 60px;
@@ -914,6 +1050,111 @@ nav {
             }
         }
         @media (max-width: 600px) {
+            .container {
+                padding: 0 3vw;
+            }
+            .section-title {
+                font-size: 1.1rem;
+                margin-bottom: 18px;
+                word-break: break-word;
+            }
+            .about-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .about-text h2 {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+            .about-text p {
+                font-size: 0.98rem;
+                margin-bottom: 10px;
+                word-break: break-word;
+            }
+            .about-image img {
+                margin-left: 0 !important;
+                max-width: 100%;
+                width: 100%;
+                margin-top: 10px;
+            }
+            .about-stats {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+            .stat-item {
+                padding: 15px 10px;
+                font-size: 0.95rem;
+            }
+            .stat-item h3, .stat-number {
+                font-size: 1.3rem !important;
+            }
+            .stat-label {
+                font-size: 0.95rem;
+            }
+            .slide-content {
+                padding: 0 5px;
+            }
+            .slide h1 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+            .slide p {
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 5px;
+                font-size: 0.95rem;
+                word-break: break-word;
+            }
+            .header-top .container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            .blog-content h3 {
+                font-size: 1.1rem;
+            }
+            .blog-content p {
+                font-size: 0.98rem;
+            }
+            .footer-title {
+                font-size: 1rem;
+            }
+            .footer-address, .footer-links a, .footer-links li {
+                font-size: 0.95rem;
+                word-break: break-word;
+            }
+            nav {
+                padding: 10px 0;
+            }
+            .logo {
+                font-size: 1.1rem;
+                gap: 5px;
+            }
+            .logo-img {
+                width: 35px;
+            }
+            header.shrink .logo-img {
+                width: 18px;
+            }
+            header.shrink nav {
+                padding: 0 !important;
+            }
+            .header-top {
+                padding: 2px 0;
+                font-size: 0.8rem;
+            }
+            header.shrink .header-top {
+                padding: 1px 0;
+                font-size: 0.7rem;
+            }
+            .custom-btn, .btn {
+                padding: 7px 10px;
+                font-size: 0.98rem;
+            }
             .services-grid {
                 grid-template-columns: 1fr;
             }
@@ -955,6 +1196,20 @@ nav {
                 width: 100px;
                 padding: 0 10px;
             }
+            .testimonials-slider .testimonial-card {
+                margin-bottom: 18px;
+            }
+            .testimonials-slider .customer-name {
+                margin-bottom: 18px;
+                display: block;
+            }
+            .testimonials-slider .slider-controls {
+                margin-top: 28px !important;
+            }
+            .expandable-title, .expandable-content { 
+                padding: 12px 8px; 
+                font-size: 1rem;
+            }
         }
         @media (max-width: 480px) {
             .projects-grid {
@@ -977,393 +1232,6 @@ nav {
             .stats-grid {
                 grid-template-columns: 1fr;
             }
-        }
-
-        /* ...existing code... */
-@media (max-width: 600px) {
-    .container {
-        padding: 0 3vw;
-    }
-    .section-title {
-        font-size: 1.1rem;
-        margin-bottom: 18px;
-        word-break: break-word;
-    }
-    .about-content {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .about-text h2 {
-        font-size: 1.1rem;
-        margin-bottom: 10px;
-    }
-    .about-text p {
-        font-size: 0.98rem;
-        margin-bottom: 10px;
-        word-break: break-word;
-    }
-    .about-image img {
-        margin-left: 0 !important;
-        max-width: 100%;
-        width: 100%;
-        margin-top: 10px;
-    }
-    .about-stats {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-    }
-    .stat-item {
-        padding: 15px 10px;
-        font-size: 0.95rem;
-    }
-    .stat-item h3, .stat-number {
-        font-size: 1.3rem !important;
-    }
-    .stat-label {
-        font-size: 0.95rem;
-    }
-    .slide-content {
-        padding: 0 5px;
-    }
-    .slide h1 {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-    }
-    .slide p {
-        font-size: 1rem;
-        margin-bottom: 15px;
-    }
-    .contact-info {
-        flex-direction: column;
-        gap: 5px;
-        font-size: 0.95rem;
-        word-break: break-word;
-    }
-    .header-top .container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-    }
-    .blog-content h3 {
-        font-size: 1.1rem;
-    }
-    .blog-content p {
-        font-size: 0.98rem;
-    }
-    .footer-title {
-        font-size: 1rem;
-    }
-    .footer-address, .footer-links a, .footer-links li {
-        font-size: 0.95rem;
-        word-break: break-word;
-    }
-    nav {
-        padding: 10px 0;
-    }
-    .logo {
-        font-size: 1.1rem;
-        gap: 5px;
-    }
-    .logo-img {
-        width: 35px;
-    }
-    .custom-btn, .btn {
-        padding: 7px 10px;
-        font-size: 0.98rem;
-    }
-}
-
-    @media (max-width: 600px) {
-    .testimonials-slider .testimonial-card {
-        margin-bottom: 18px;
-    }
-    .testimonials-slider .customer-name {
-        margin-bottom: 18px;
-        display: block;
-    }
-    .testimonials-slider .slider-controls {
-        margin-top: 28px !important;
-    }
-}
-
-    /* Certificates Section Responsive Styles */
-.certificates-section {
-    padding: 60px 0;
-    /* background: #f9f9f9; */
-}   
-.certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
-    margin-top: 30px;
-}
-.certificate-card {
-    background: #fff;
-    border-radius: 8px;
-    /* box-shadow: 0 4px 12px rgba(0,0,0,0.08); */
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-    transition: transform 0.3s;
-}
-.certificate-card:hover {
-    transform: translateY(-6px) scale(1.03);
-}
-.certificate-card img {
-    width: 100%;
-    height: 90px;
-    object-fit: contain;
-    border-radius: 6px;
-    background: #f4f4f4;
-}
-
-@media (max-width: 991px) {
-    .certificates-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-    }
-    .certificate-card img {
-        height: 160px;
-    }
-}
-@media (max-width: 600px) {
-    .certificates-section {
-        padding: 30px 0;
-    }
-    .certificates-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
-    }
-    .certificate-card img {
-        height: 80px;
-    }
-}
-
-      /* new code added */
-            /* Simple grid for certificate images without cards */
-.certificates-grid.simple-certificates {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 24px;
-    margin-top: 30px;
-    background: none;
-    box-shadow: none;
-}
-.certificates-grid.simple-certificates img {
-    width: 100%;
-    height: 90px;
-    object-fit: contain;
-    border-radius: 6px;
-    /* background: #f4f4f4; */
-    background: none;
-    box-shadow: none;
-    display: block;
-    margin: 0 auto;
-    padding: 8px 0;
-    transition: transform 0.3s;
-}
-.certificates-grid.simple-certificates img:hover {
-    transform: scale(1.04);
-    /* box-shadow: 0 2px 8px rgba(46,139,87,0.08); */
-}
-
-
-/* new css added */
-        /* header {
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    transition: all 0.3s cubic-bezier(.4,0,.2,1);
-}
-header.shrink {
-    padding-top: 0 !important;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-}
-.header-top {
-    background-color: green;
-    color: white;
-    padding: 10px 0;
-    font-size: 0.9rem;
-    transition: padding 0.3s cubic-bezier(.4,0,.2,1), font-size 0.3s cubic-bezier(.4,0,.2,1);
-}
-header.shrink .header-top {
-    padding: 2px 0;
-    font-size: 0.8rem;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: padding 0.3s cubic-bezier(.4,0,.2,1);
-    padding: 15px 0;
-    position: relative;
-}
-header.shrink nav {
-    padding: 2px 0 !important;
-}
-.logo-img {
-    width: 80px;
-    height: auto;
-    transition: width 0.3s cubic-bezier(.4,0,.2,1), height 0.3s cubic-bezier(.4,0,.2,1);
-}
-header.shrink .logo-img {
-    width: 40px;
-}
-@media (max-width: 600px) {
-    .logo-img {
-        width: 35px;
-    }
-    header.shrink .logo-img {
-        width: 22px;
-    }
-} */
-
-
-        header {
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    transition: all 0.3s cubic-bezier(.4,0,.2,1);
-}
-header.shrink {
-    padding-top: 0 !important;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-}
-.header-top {
-    background-color: green;
-    color: white;
-    padding: 10px 0;
-    font-size: 0.9rem;
-    transition: padding 0.3s cubic-bezier(.4,0,.2,1), font-size 0.3s cubic-bezier(.4,0,.2,1);
-}
-header.shrink .header-top {
-    padding: 1px 0;
-    font-size: 0.7rem;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: padding 0.3s cubic-bezier(.4,0,.2,1);
-    position: relative;
-    padding: 15px 0;
-}
-header.shrink nav {
-    padding: 0 !important;
-}
-.logo-img {
-    width: 80px;
-    height: auto;
-    transition: width 0.3s cubic-bezier(.4,0,.2,1), height 0.3s cubic-bezier(.4,0,.2,1);
-}
-header.shrink .logo-img {
-    width: 28px;
-}
-.nav-links a {
-    font-size: 1rem;
-    padding: 6px 0;
-    transition: font-size 0.3s;
-}
-header.shrink .nav-links a {
-    font-size: 0.85rem;
-    padding: 2px 0;
-}
-@media (max-width: 600px) {
-    .logo-img {
-        width: 28px;
-    }
-    header.shrink .logo-img {
-        width: 18px;
-    }
-    nav {
-        padding: 7px 0;
-    }
-    header.shrink nav {
-        padding: 0 !important;
-    }
-    .header-top {
-        padding: 2px 0;
-        font-size: 0.8rem;
-    }
-    header.shrink .header-top {
-        padding: 1px 0;
-        font-size: 0.7rem;
-    }
-}
-
-/* new code added for service scroll image */
-        .services.fixed-bg {
-    position: relative;
-    background: url('https://images.unsplash.com/photo-1518770660439-4636190af475') center center/cover no-repeat fixed;
-    /* fallback color if image not loaded */
-    background-color: #f0f0f0;
-}
-.services.fixed-bg::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    /* background: rgba(255,255,255,0.82); */
-    z-index: 1;
-}
-.services.fixed-bg > .container {
-    position: relative;
-    z-index: 2;
-}
-
-    /* new code added for expendable title */
-
-        .expandable-info-section .expandable-group {
-            margin-bottom: 18px;
-            border-radius: 6px;
-            background: #fff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            overflow: hidden;
-        }
-        .expandable-title {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            padding: 18px 22px;
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: #2e8b57;
-            background: #eaf7ee;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .expand-btn {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: #2e8b57;
-            cursor: pointer;
-            outline: none;
-            width: 32px;
-            height: 32px;
-            line-height: 1;
-        }
-        .expandable-content {
-            padding: 18px 22px;
-            color: #333;
-            background: #fff;
-            font-size: 1rem;
-            animation: fadeIn 0.3s;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0;}
-            to { opacity: 1;}
-        }
-        @media (max-width:600px) {
-            .expandable-title, .expandable-content { padding: 12px 8px; font-size: 1rem;}
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -1411,33 +1279,26 @@ header.shrink .nav-links a {
     <!-- Hero Slider Section -->
     <section class="hero-slider" id="home">
         <!-- Slide 1 -->
-         <div class="slide active" style="background-image: url('images/slideimages/img1.png');">
+         <div class="slide active" style="background-image: url('images/slideimages/slidingimg1.JPG');">
             <div class="slide-content">
-                <!-- <h1>We Help in Clearing Non Moving Stocks and Excess Inventory's</h1>
-                <p>SAHARA SCRAP RECYLING has been a leader in the scrap business industry since 2003, offering professional services across India.</p>
-                <a href="contactup.html" class="custom-btn">Contact Us</a> -->
+                <!-- <h1 style="color: green;">WELCOME TO SAHARA SCRAP RECYCLING CO.</h1>
+                <p>We purchase used office furniture and complete office assets, including workstations, chairs, partitions, and more.</p>
+                <a href="contactup.html" class="custom-btn">Get In Touch</a> -->
             </div>
         </div>
         
         <!-- Slide 2 -->
-        <div class="slide" style="background-image: url('images/slideimages/img2.png');">
+        <div class="slide" style="background-image: url('images/slideimages/slidingimg2.jpg');">
             <div class="slide-content">
-                <!-- <h1>Leading Scrap Buyer in Pan India</h1>
-                <p>Professional services as a prominent scrap buyer and service provider across various sectors throughout India.</p>
-                <a href="contactup.html" class="custom-btn">Get a Quote</a> -->
             </div>
         </div>
         <!-- Slide 3 -->
-        <div class="slide" style="background-image: url('https://media.istockphoto.com/id/509368504/photo/clow-crane.jpg?s=612x612&w=0&k=20&c=PKatpRjDAJa_Uk9nJjqwJ4rD0mXUDf4ZPBCqKUjWvRc=');">
+        <div class="slide" style="background-image: url('images/slideimages/slidingimg3.jpg');">
             <div class="slide-content">
-                <h1>Complete Office Asset Solutions</h1>
-                <p>We purchase used office furniture and complete office assets, including workstations, chairs, partitions, and more.</p>
-                <a href="contactup.html" class="custom-btn">Get In Touch</a>
             </div>
         </div>  
              
         <!-- Slide 4: Video Slide -->
-        
                 <div class="slide" style="background: #000; position: relative; overflow: hidden;">
     <video 
         id="slider-video-bg"
@@ -1449,10 +1310,6 @@ header.shrink .nav-links a {
         playsinline
         style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1;">
     </video>
-    <div class="slide-content" style="position:relative;z-index:2; background:rgba(0,0,0,0.45); border-radius:10px;">
-        <h1 style="color:white; margin-top:20px;">WELCOME TO SAHARA SCRAP RECYCLING CO.</h1>
-        <p style="color:white;">LEADING INDIA'S INDUSTRIAL SCRAP & WASTE RECYCLING WITH ENVIROMENTAL COMPILANCE AND COMPLETE LICENCING.</p>
-    </div>
 </div>
         <div class="slider-controls">
             <button class="active" data-slide="0"></button>
@@ -1462,39 +1319,6 @@ header.shrink .nav-links a {
         </div>
     </section>
     <!-- About Section -->
-    <!-- <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title" style="color:green;">About Our Company</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 style="color:green;">Leading Scrap Buyer in Pan India</h2>
-                    <p><strong>SAHARA SCRAP RECYLING</strong> has been leader in the scrap business industry since 2003, offering professional services as a prominent scrap buyer and service provider across various sectors, including IT software, ITBT, corporate, and industrial manufacturing throughout India.</p>
-                    <p>Our expertise encompasses the purchase of used office furniture and complete office assets, office interior dismantling, as well as industrial and manufacturing scrap. Furthermore, we provide solutions for non-moving warehouse stock and excess inventory clearance, including surplus electronic goods and dead stock from the automobile and industrial manufacturing sectors.</p>
-                    <div class="contact-details">
-                        <p><i class="fas fa-envelope"></i><a href="mailto:sahazad.khan@gmail.com"> Email Us : sahazad.khan@gmail.com</a></p>
-                        <p><i class="fas fa-phone"></i><a href="tel:+919967031291"> Contact Us : +91-9967031291 / +91-9933002208</a></p>
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <h3 style="color:green;">200+</h3>
-                            <p>Scrap Projects</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 style="color:green;">21+</h3>
-                            <p>Years of Experience</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 style="color:green;">100+</h3>
-                            <p>Satisfied Clients</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="images/slideimages/image (2).png" alt="Scrap recycling">
-                </div>
-            </div>
-        </div>
-    </section> -->
     <section class="about" id="about">
         <div class="container">
             <h2 class="section-title" style="color:green;">About Our Company</h2>
@@ -1894,9 +1718,6 @@ header.shrink .nav-links a {
             <p class="clients-subtitle">Brief list of our customers gives you clear pictures of our business ethics and professional services, appreciated by series of the finest clients</p>
             <div class="clients-slider">
                 <div class="clients-track">
-                    <!-- <div class="client-logo">
-                        <img src="images/clientsimages/adbd.png" alt="Aditya Birla">
-                    </div> -->
                     <div class="client-logo">
                         <img src="images/clientsimages/wal.png" alt="Walmart">
                     </div>
@@ -1921,10 +1742,6 @@ header.shrink .nav-links a {
                     <div class="client-logo">
                         <img src="images/clientsimages/tata.png" alt="Tata">
                     </div>
-                    <!-- Duplicate Logos for Infinite Loop -->
-                    <!-- <div class="client-logo">
-                        <img src="images/clientsimages/adbd.png" alt="Aditya Birla">
-                    </div> -->
                     <div class="client-logo">
                         <img src="images/clientsimages/wal.png" alt="Walmart">
                     </div>
@@ -1955,39 +1772,6 @@ header.shrink .nav-links a {
     </section>   
 
         <!-- Add this section where you want to show the certificates, e.g. after the Clients Section -->
-<!-- <section class="certificates-section">
-    <div class="container">
-        <h2 class="section-title" style="color:green;">Our Company Certificates</h2>
-         <div class="certificates-grid">
-            <div class="certificate-card">
-                <img src="images/homepagecertificates/mpcb.jpg" alt="Certificate 1">
-            </div>
-            <div class="certificate-card">  
-                <img src="images/homepagecertificates/cpcb.png" alt="Certificate 2">
-            </div>
-            <div class="certificate-card">
-                <img src="images/homepagecertificates/epr.webp" alt="Certificate 3">
-            </div>
-            <div class="certificate-card">
-                <img src="images/homepagecertificates/ISO.png" alt="Certificate 4">
-            </div> -->
-            <!-- Add more certificate-card divs as needed -->
-             <!-- <div class="certificate-card">
-                <img src="images/homepagecertificates/ISO14.webp" alt="Certificate 5">
-            </div>  
-            <div class="certificate-card">
-                <img src="images/homepagecertificates/ISO45.png" alt="Certificate 6">
-            </div>
-            <div class="certificate-card">
-                <img src="images/homepagecertificates/GST.png" alt="Certificate 7">
-            </div>
-            <div class="certificate-card">
-                <img src="images/homepagecertificates/MSMEE.png" alt="Certificate 8">
-            </div>
-        </div>
-    </div>
-</section> -->
-
 <section class="certificates-section">
     <div class="container">
         <h2 class="section-title" style="color:green;">Our Company Certificates</h2>
@@ -2032,6 +1816,12 @@ header.shrink .nav-links a {
                 <div class="footer-column">
                     <h3 class="footer-title" style="color:green;">OFFICE ADDRESS</h3>
                     <address class="footer-address">
+                        <p><i class="fa-solid fa-location-dot"></i> RUBY STEEL MARKET. GUT NO-134/0,135/2 PL-9
+                        ADIVALI VILLAGE PANVEL RAI GAD Adivali 410208
+                        Panvel Mumbai(INDIA)</p>
+                        <p><i class="fa-solid fa-location-dot"></i> RUBY STEEL MARKET. GUT NO-134/0,135/2 PL-9
+                        ADIVALI VILLAGE PANVEL RAI GAD Adivali 410208
+                        Panvel Mumbai(INDIA)</p>
                         <p><i class="fa-solid fa-location-dot"></i> RUBY STEEL MARKET. GUT NO-134/0,135/2 PL-9
                         ADIVALI VILLAGE PANVEL RAI GAD Adivali 410208
                         Panvel Mumbai(INDIA)</p>
@@ -2200,7 +1990,7 @@ header.shrink .nav-links a {
                 showTestimonial(currentTestimonial);
             }
             function startSlider() {
-                slideInterval = setInterval(nextTestimonial, 5000);
+                slideInterval = setInterval(nextTestimonial, 1000);
             }
             sliderBtns.forEach((btn, index) => {
                 btn.addEventListener('click', function() {
@@ -2217,27 +2007,6 @@ header.shrink .nav-links a {
             });
             sliderContainer.addEventListener('mouseleave', startSlider);
         });
-
-        // Hide/show navbar on scroll
-        // let lastScrollTop = 0;
-        // const header = document.querySelector('header');
-        // window.addEventListener('scroll', function() {
-        //     let st = window.pageYOffset || document.documentElement.scrollTop;
-        //     if (st < lastScrollTop) {
-        //         // Scrolling up - hide header
-        //         header.style.transform = 'translateY(0)';
-        //     } else {
-        //         // Scrolling down - show header
-        //         header.style.transform = 'translateY(-100%)';
-        //     }
-        //     lastScrollTop = st <= 0 ? 0 : st;
-        // }, false);
-        // // Initial style for smooth transition
-        // header.style.transition = 'transform 0.3s';
-
-
-
-        //new js added
         // Header shrink/expand on scroll direction
     let lastScrollTop = 0;
     const header = document.querySelector('header');
@@ -2255,7 +2024,6 @@ header.shrink .nav-links a {
         
 
     //new code expandable
-
     function toggleExpandable(el) {
             const content = el.nextElementSibling;
             const btn = el.querySelector('.expand-btn');
@@ -2276,6 +2044,30 @@ header.shrink .nav-links a {
                 btn.textContent = '+';
             });
         });
+
+
+        //new animation for servuice cards
+        // Add this before the closing </body> tag or in a JS file
+// filepath: your-script.js
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll('.service-card');
+
+    function checkCards() {
+        const triggerBottom = window.innerHeight * 0.9;
+
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+
+            if (cardTop < triggerBottom) {
+                card.classList.add('slide-in');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkCards);
+    checkCards(); // Run on load
+});
     </script>
 </body>
 </html>
