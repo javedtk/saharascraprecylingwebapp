@@ -66,7 +66,136 @@
         }
         
         /* Header Styles */
-        header {
+        /* Header Top */
+.header-top {
+    background: #f6fff8;
+    color: #1a7f37;
+    font-size: 0.98rem;
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+    transition: padding 0.3s;
+    position: relative;
+    z-index: 1100;
+}
+.header-top.shrink {
+    padding: 2px 0;
+    font-size: 0.92rem;
+}
+/* Make sure the container uses flex and space-between */
+.header-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Social links stay on the right */
+.social-links {
+    margin-left: auto;
+    display: flex;
+    gap: 12px;
+}
+
+/* Main Navbar */
+.main-navbar {
+    background: transparent;
+    transition: background 0.3s, box-shadow 0.3s, padding 0.3s;
+    box-shadow: none;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 12px 0;
+}
+.main-navbar.shrink {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 4px 0;
+}
+.main-navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-navbar .logo-img {
+    height: 60px;
+    width: 200px;
+    object-fit: contain;
+    transition: height 0.3s, width 0.3s;
+}
+.main-navbar.shrink .logo-img {
+    height: 90px;
+    width: 180px;
+}
+.main-navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s;
+}
+.main-navbar .nav-links li a {
+    color: #1a7f37;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+.main-navbar .nav-links li a:hover,
+.main-navbar .nav-links li a.active {
+    background: #f6fff8;
+    color: #0e4d1c;
+}
+.main-navbar .mobile-menu-btn {
+    display: none;
+    font-size: 1.8rem;
+    color: #1a7f37;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .main-navbar .nav-links {
+        gap: 14px;
+    }
+    .main-navbar .logo-img {
+        height: 48px;
+        width: 140px;
+    }
+}
+@media (max-width: 768px) {
+    .header-top .container,
+    .main-navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .main-navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .main-navbar .nav-links.open {
+        display: flex;
+    }
+    .main-navbar .mobile-menu-btn {
+        display: block;
+        margin-left: auto;
+    }
+    .main-navbar .logo-img {
+        height: 40px;
+        width: 110px;
+    }
+}
+        /* header {
             background-color: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
@@ -149,7 +278,7 @@
         }
         .social-links {
             padding: 0px 10px;
-        }
+        } */
 
         /* Hero Slider Section */
         .hero-slider {
@@ -913,7 +1042,7 @@
             }
         }
         @media (max-width: 991px) {
-            nav {
+            /* nav {
                 flex-direction: column;
                 align-items: flex-start;
             }
@@ -942,7 +1071,7 @@
             }
             .mobile-menu-btn {
                 display: block;
-            }
+            } */
             .about-content {
                 flex-direction: column;
                 gap: 20px;
@@ -1109,11 +1238,11 @@
                 font-size: 0.95rem;
                 word-break: break-word;
             }
-            .header-top .container {
+            /* .header-top .container {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 5px;
-            }
+            } */
             .blog-content h3 {
                 font-size: 1.1rem;
             }
@@ -1267,7 +1396,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <!-- <header>
         <div class="header-top">
             <div class="container">
                 <div class="contact-info">
@@ -1286,10 +1415,6 @@
             <nav>
                 <div class="logo">
                     <img src="images/companylogo/cmpnylgo.jpg" alt="Company Logo" class="logo-img" style="height:60px; width:200px; display:block;" />
-                    <!-- <div class="logo-text">
-                        SAHARA SCRAP RECYCLING CO.
-                        <span>Sahara Scrap Recycle India</span>
-                    </div> -->
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">HOME</a></li>
@@ -1304,7 +1429,44 @@
                 </div>
             </nav>
         </div>
-    </header>
+    </header> -->
+
+
+                <!-- Header Top (Contact & Social) -->
+<header class="header-top">
+    <div class="container">
+        <div class="contact-info">
+            <span><i class="fas fa-phone"></i><a href="tel:+91-9967031291"> +91-9967031291 / +91-9933002208</a></span>
+            <span><i class="fas fa-envelope"></i><a href="mailto:sahazad.khan@xxxxx.in"> sahazad.khan@xxxxx.in</a></span>
+            <span><i class="fas fa-location"></i> Panvel Mumbai(INDIA)</span>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation Bar -->
+<nav class="main-navbar">
+    <div class="container">
+        <div class="logo">
+            <img src="images/companylogo/cmpnylogoo.png" alt="Company Logo" class="logo-img" />
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="aboutus.html">ABOUT US</a></li>
+            <li><a href="services.html">OUR SERVICES</a></li>
+            <li><a href="clients.html">CLIENTS</a></li>
+            <li><a href="blogs.html">BLOG</a></li>
+            <li><a href="https://khannjuned3.wixsite.com/my-site-21">CONTACT US</a></li>
+        </ul>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
     <!-- Hero Slider Section -->
     <section class="hero-slider" id="home">
         <!-- Slide 1 -->
@@ -1874,11 +2036,11 @@
     </footer>
     <script>
         // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+        // const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        // const navLinks = document.querySelector('.nav-links');
+        // mobileMenuBtn.addEventListener('click', () => {
+        //     navLinks.classList.toggle('active');
+        // });
         // Close mobile menu when clicking on a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
@@ -2040,19 +2202,19 @@
             sliderContainer.addEventListener('mouseleave', startSlider);
         });
         // Header shrink/expand on scroll direction
-    let lastScrollTop = 0;
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', function() {
-        let st = window.pageYOffset || document.documentElement.scrollTop;
-        if (st > lastScrollTop) {
-            // Scrolling down - shrink header
-            header.classList.add('shrink');
-        } else {
-            // Scrolling up - expand header
-            header.classList.remove('shrink');
-        }
-        lastScrollTop = st <= 0 ? 0 : st;
-    }, false);
+    // let lastScrollTop = 0;
+    // const header = document.querySelector('header');
+    // window.addEventListener('scroll', function() {
+    //     let st = window.pageYOffset || document.documentElement.scrollTop;
+    //     if (st > lastScrollTop) {
+    //         // Scrolling down - shrink header
+    //         header.classList.add('shrink');
+    //     } else {
+    //         // Scrolling up - expand header
+    //         header.classList.remove('shrink');
+    //     }
+    //     lastScrollTop = st <= 0 ? 0 : st;
+    // }, false);
         
 
     //new code expandable
@@ -2079,9 +2241,6 @@
 
 
         //new animation for servuice cards
-        // Add this before the closing </body> tag or in a JS file
-// filepath: your-script.js
-
 document.addEventListener("DOMContentLoaded", function () {
     const cards = document.querySelectorAll('.service-card');
 
@@ -2099,6 +2258,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener('scroll', checkCards);
     checkCards(); // Run on load
+});
+
+
+
+//new navbar code added
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('.main-navbar');
+    const headerTop = document.querySelector('.header-top');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.main-navbar .nav-links');
+
+    // Shrink header and navbar on scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('shrink');
+            headerTop.classList.add('shrink');
+        } else {
+            navbar.classList.remove('shrink');
+            headerTop.classList.remove('shrink');
+        }
+    });
+
+    // Mobile menu toggle
+    mobileMenuBtn.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+    });
+
+    // Optional: Close menu when a link is clicked (mobile)
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+        });
+    });
 });
     </script>
 </body>
