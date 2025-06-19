@@ -209,7 +209,7 @@
                 display: none;
                 flex-direction: column;
                 width: 100%;
-                background: #fff;
+                background: rgba(95, 250, 87, 0.734);
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -411,6 +411,8 @@
         }
 
         .about-text p {
+            /* font-size: 1.08rem;
+            font-weight:bold; */
             margin-bottom: 20px;
         }
 
@@ -901,7 +903,7 @@
             text-align: center;
             max-width: 700px;
             margin: 0 auto 40px;
-            color: #666;
+            color: #fff;
             line-height: 1.6;
         }
 
@@ -939,6 +941,49 @@
             opacity: 1;
         }
 
+        /* added new css for cliens */
+        /* Add to your CSS */
+        /* Responsive blurred background for Clients Section */
+        .with-blur-bg {
+            position: relative;
+            overflow: hidden;
+            min-height: 350px;
+        }
+
+        .blur-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/slideimages/slidingimg1.jpg') center center/cover no-repeat;
+            filter: blur(12px) brightness(0.7);
+            z-index: 0;
+            pointer-events: none;
+            transition: background-size 0.3s;
+        }
+
+        .with-blur-bg>.container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 991px) {
+            .with-blur-bg {
+                min-height: 280px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .with-blur-bg {
+                min-height: 200px;
+            }
+        }
+
+        /* ended new css for clients */
         @keyframes slide {
             0% {
                 transform: translateX(0);
@@ -989,6 +1034,43 @@
             align-items: center;
         }
 
+
+        /* new code added for certificate */
+       .with-blur-bg-cert {
+    position: relative;
+    overflow: hidden;
+    min-height: 350px;
+}
+
+.blur-bg-cert {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/slideimages/slidingimg1.jpg') center center/cover no-repeat;
+    filter: blur(12px) brightness(0.7);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.with-blur-bg-cert > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .with-blur-bg-cert {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .with-blur-bg-cert {
+        min-height: 180px;
+    }
+}
+        /* new code ended for certificates */
         /* 2 per row on tablet and mobile */
         @media (max-width: 1024px) {
             .certificates-grid {
@@ -1330,6 +1412,7 @@
             }
 
             .about-text p {
+                /* font-weight: bold; */
                 font-size: 0.98rem;
                 margin-bottom: 10px;
                 word-break: break-word;
@@ -1547,6 +1630,8 @@
         }
 
         .industry-list {
+            /* font-weight: bold;
+           font-size: 1.08rem; */
             list-style: none;
             padding: 0;
             margin: 0 0 18px 0;
@@ -1685,17 +1770,18 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2 style="color:green;">Leading Scrap Buyer in Pan India</h2>
-                    <p>
-                        Sahara Scrap Recycling Co. is a professionally managed, government-licensed organization
-                        specializing in the collection, segregation, transportation, and recycling of industrial scrap
-                        and waste materials across India.<br>
-                        With operations headquartered at Panvel, Navi Mumbai (Maharashtra), we are known for delivering
-                        environmentally responsible and fully compliant solutions to a wide spectrum of industries
-                        including:
+                    <p><strong>Sahara Scrap Recycling Co. is a professionally managed, government-licensed organization
+                            specializing in the collection, segregation, transportation, and recycling of industrial
+                            scrap
+                            and waste materials across India.<br>
+                            With operations headquartered at Panvel, Navi Mumbai (Maharashtra), we are known for
+                            delivering
+                            environmentally responsible and fully compliant solutions to a wide spectrum of industries
+                            including:</strong>
                     </p>
                     <ul>
                         <ul class="industry-list">
-                            <li>Iron, Steel & Metal Manufacturing Industry</li>
+                            <li><strong>Iron, Steel & Metal Manufacturing Industry</strong></li>
                             <li>Oil, Gas & Petrochemical Industry</li>
                             <li>Energy & Power Renewable Energy Industry</li>
                             <li>Pharmaceutical & Chemical Industry</li>
@@ -2127,9 +2213,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section><br>
     <!-- Clients Section -->
-    <section class="clients-section">
+    <!-- <section class="clients-section">
         <div class="container">
             <h2 class="section-title" style="color:green;">Our Clients</h2>
             <p class="clients-subtitle">Brief list of our customers gives you clear pictures of our business ethics and
@@ -2187,10 +2273,73 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <!-- Clients Section with fixed blurred background -->
+    <section class="clients-section with-blur-bg">
+        <div class="blur-bg"></div>
+        <div class="container">
+            <h2 class="section-title" style="color:green;">Our Clients</h2>
+            <p class="clients-subtitle">Brief list of our customers gives you clear pictures of our business ethics and
+                professional services, appreciated by series of the finest clients</p>
+            <div class="clients-slider">
+                <div class="clients-track">
+                    <div class="client-logo">
+                        <img src="images/clientsimages/wal.png" alt="Walmart">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/clientsimages/vdo.png" alt="Videocon">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/clientsimages/cbre.png" alt="CBRE">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/clientsimages/reilance.png" alt="GE Aviation">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/clientsimages/him.png" alt="Himlaya">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/clientsimages/king.png" alt="Kingfisher">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/clientsimages/godrej.png" alt="Godrej">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/clientsimages/tata.png" alt="Tata">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/clientsimages/wal.png" alt="Walmart">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/clientsimages/vdo.png" alt="Videocon">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/clientsimages/cbre.png" alt="CBRE">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/clientsimages/reilance.png" alt="GE Aviation">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/clientsimages/him.png" alt="Himlaya">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/clientsimages/king.png" alt="Kingfisher">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/clientsimages/godrej.png" alt="Godrej">
+                    </div>
+                    <div class="client-logo">
+                        <img src="images/clientsimages/tata.png" alt="Tata">
+                    </div>
+                    <!-- ...repeat as needed... -->
+                </div>
+            </div>
+        </div>
+    </section><br>
 
     <!-- Add this section where you want to show the certificates, e.g. after the Clients Section -->
-    <section class="certificates-section">
+    <!-- <section class="certificates-section">
         <div class="container">
             <h2 class="section-title" style="color:green;">Our Company Certificates</h2>
             <div class="certificates-grid simple-certificates">
@@ -2204,7 +2353,24 @@
                 <img src="images/homepagecertificates/MSMEE.png" alt="Certificate 8">
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <section class="certificates-section with-blur-bg-cert">
+    <div class="blur-bg-cert"></div>
+    <div class="container">
+        <h2 class="section-title" style="color:green;">Our Company Certificates</h2>
+        <div class="certificates-grid simple-certificates">
+            <img src="images/homepagecertificates/mpcb.png" alt="Certificate 1">
+            <img src="images/homepagecertificates/cpcb.png" alt="Certificate 2">
+            <img src="images/homepagecertificates/epr.png" alt="Certificate 3">
+            <img src="images/homepagecertificates/ISO.png" alt="Certificate 4">
+            <img src="images/homepagecertificates/ISO14.webp" alt="Certificate 5">
+            <img src="images/homepagecertificates/ISO45.png" alt="Certificate 6">
+            <img src="images/homepagecertificates/GST.png" alt="Certificate 7">
+            <img src="images/homepagecertificates/MSMEE.png" alt="Certificate 8">
+        </div>
+    </div>
+</section><br>
     <!-- Footer Section -->
     <footer class="footer-section">
         <div class="container">
@@ -2265,12 +2431,6 @@
         </div>
     </footer>
     <script>
-        // Mobile Menu Toggle
-        // const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        // const navLinks = document.querySelector('.nav-links');
-        // mobileMenuBtn.addEventListener('click', () => {
-        //     navLinks.classList.toggle('active');
-        // });
         // Close mobile menu when clicking on a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
@@ -2431,21 +2591,6 @@
             });
             sliderContainer.addEventListener('mouseleave', startSlider);
         });
-        // Header shrink/expand on scroll direction
-        // let lastScrollTop = 0;
-        // const header = document.querySelector('header');
-        // window.addEventListener('scroll', function() {
-        //     let st = window.pageYOffset || document.documentElement.scrollTop;
-        //     if (st > lastScrollTop) {
-        //         // Scrolling down - shrink header
-        //         header.classList.add('shrink');
-        //     } else {
-        //         // Scrolling up - expand header
-        //         header.classList.remove('shrink');
-        //     }
-        //     lastScrollTop = st <= 0 ? 0 : st;
-        // }, false);
-
 
         //new code expandable
         function toggleExpandable(el) {
