@@ -11,6 +11,10 @@
       padding: 0;
       box-sizing: border-box;
     }
+    html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
 
     body {
       font-family: 'Arial', sans-serif;
@@ -822,6 +826,156 @@
 .image-text-overlay-full p {
     font-weight: bold;
 }
+
+
+/* core value css */
+
+/* Add to your <style> tag in aboutus.html */
+
+/* Core Values Section with Blurred Fixed Background */
+/* .core-values-bg-section {
+  position: relative;
+  width: 100vw;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.core-values-blur-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100%;
+  background: url('images/companylogo/cmpnylogoo.png') center center/cover no-repeat fixed;
+  filter: blur(7px) brightness(0.7);
+  z-index: 0;
+  pointer-events: none;
+} */
+/* Reduce width and prevent horizontal scroll for .core-values-bg-section on desktop */
+/* Further reduce width and prevent horizontal scroll for .core-values-bg-section on desktop */
+/* Update your .core-values-bg-section and .core-values-blur-bg */
+.core-values-bg-section {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.core-values-blur-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/aboutuspngs/corevalue.jpg') center center/cover no-repeat fixed;
+  filter: blur(2px) brightness(0.7);
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+.core-values-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px 40px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.core-values-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+  color: #fcf9f9;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.core-values-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.core-value-item {
+  background: rgba(34, 139, 87, 0.85);
+  border-radius: 14px;
+  padding: 28px 32px 20px 32px;
+  min-width: 140px;
+  margin: 10px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
+.core-value-item:hover {
+  transform: translateY(-6px) scale(1.04);
+}
+
+.core-value-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.core-value-label {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .core-values-list {
+    gap: 20px;
+  }
+  .core-value-item {
+    min-width: 120px;
+    padding: 22px 16px 14px 16px;
+  }
+  .core-values-title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .core-values-bg-section {
+    min-height: 220px;
+  }
+  .core-values-content {
+    padding: 32px 5vw 24px 5vw;
+  }
+  .core-values-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  .core-value-item {
+    width: 90vw;
+    min-width: 0;
+    padding: 16px 0 10px 0;
+  }
+  .core-values-title {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+}
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -894,6 +1048,33 @@
         </div>
       </div>
 
+      <!-- core values code start -->
+     <!-- Blurred, fixed background image section (just above About Us) -->
+<section class="core-values-bg-section">
+  <div class="core-values-blur-bg"></div>
+  <div class="core-values-content">
+    <h2 class="core-values-title">Our Core Values</h2>
+    <div class="core-values-list">
+      <div class="core-value-item">
+        <span class="core-value-icon"><i class="fas fa-eye"></i></span>
+        <span class="core-value-label">Transparency</span>
+      </div>
+      <div class="core-value-item">
+        <span class="core-value-icon"><i class="fas fa-sync-alt"></i></span>
+        <span class="core-value-label">Flexibility</span>
+      </div>
+      <div class="core-value-item">
+        <span class="core-value-icon"><i class="fas fa-handshake"></i></span>
+        <span class="core-value-label">Commitment</span>
+      </div>
+      <div class="core-value-item">
+        <span class="core-value-icon"><i class="fas fa-balance-scale"></i></span>
+        <span class="core-value-label">Integrity</span>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- core value code ended -->
       <!-- Expandable Why You Should Choose Us Section -->
       <div class="why-choose-expandable" style="margin-top:40px;">
         <h2 style="color:#2e8b57; text-align:center; margin-bottom:24px;">Why You Should Choose Us</h2>
@@ -1060,21 +1241,19 @@
         <div class="market-content">
           <div class="market-text">
             <h2>Recycling Market – Industry Analysis and Forecast 2020 – 2026</h2>
-            <p>India Recycling Market is expected to grow at a CAGR of 8.2% throughout the forecast period, to reach US$
-              24809 Mn by 2026.</p>
-            <p>India Scrap Recycling Market, By Processed Materials 2020-2026 To know about the Research Methodology</p>
-            <p>Office Furniture’s and Office Asset Scrap, Industrial Scrap, Manufacturing Scrap, Warehouse Scrap
-              Managements India E-waste Scrap Recycling Market,</p>
-            <p>All types Demotic, Commercial, Industrial E-waste Scrap.</p>
-
-            <h3>India Scrap Recycling Market, By Processed Material:</h3>
+            <p><strong>India Recycling Market is expected to grow at a CAGR of 8.2% throughout the forecast period, to reach US$
+              24809 Mn by 2026.</strong></p>
+            <p><strong>Scrap Recycling Market, By Processed Materials 2020-2026 To know about the Research Methodology</strong></p>
+            <p><strong>Furniture’s and Office Asset Scrap, Industrial Scrap, Manufacturing Scrap, Warehouse Scrap
+              Managements India E-waste Scrap Recycling Market,</strong></p>
+            <p><strong>All types Demotic, Commercial, Industrial E-waste Scrap.</strong></p>
+            <h3><strong>India Scrap Recycling Market, By Processed Material:</strong></h3>
             <ul>
-              <li>Plastic • Metal • Ferrous o Non-ferrous o Other Precious Metal • Glass • Others (Aluminum,
-                Polycarbonate, etc.)</li>
+              <li><strong>• Metal • Ferrous o Non-ferrous o Other Precious Metal • Glass • Others (Aluminum,
+                Polycarbonate, etc.)</strong></li>
             </ul>
-
-            <p>Key players operating in India Scrap Recycling Market Bangalore Mart Inc, Scrap Mart Recycle India,
-              Hi-Tech Eco Green, Hi Tech Metals and Alloys Etc.</p>
+            <p><strong>Key players operating in India Scrap Recycling Market Bangalore Mart Inc, Scrap Mart Recycle India,
+              Hi-Tech Eco Green, Hi Tech Metals and Alloys Etc.</strong></p>
           </div>
 
           <div class="market-chart">
